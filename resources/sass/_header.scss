@@ -1,0 +1,50 @@
+header {
+    padding: 15px 0;
+    background-color: $white;
+    .navbar {
+        padding: 0;
+    }
+    .nav-link {
+        text-decoration: none; 
+        padding-right: 1rem;
+        padding-left: 1rem;
+        margin-right: 1.5rem;
+        margin-left: 1.5rem;
+        color: $dark-grey;
+    }
+    .hvr-overline-from-center:before {
+        background-color: $dark-grey;
+    }
+    .logo {
+        height: 100%;
+        max-height: 82px;
+        width: auto;
+    }
+    .nav-contact {
+        background-color: #e16000 !important;
+        color: #ffffff !important;
+        border-radius: 30px;
+        margin-top: 0px;
+        min-width: 200px;
+        height: 40px;
+        line-height: 25px;
+        text-align: center;
+        img {
+            padding-left: 5px;
+            padding-bottom: 2px;
+        }
+        &:hover {
+            background-color: $dark-orange;    
+        }
+    }
+    .navbar-toggler {
+        right: 20px;
+        position: relative;
+        padding: 1.5rem;
+        font-size: 1.5rem;
+        line-height: 1;
+        background-color: rgba(255, 255, 255, 1);
+        border: 1px solid transparent;
+        border-radius: 0;
+    }
+}

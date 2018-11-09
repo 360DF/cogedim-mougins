@@ -1,0 +1,46 @@
+// Body
+$body-bg: $white;
+// Color
+$white: #ffffff !important;
+$black: #000000 !important;
+
+$dark-grey: #1c1e1c !important;
+$light-grey: #888!important;
+$grey: #535353 !important;
+$orange: #dd611c !important;
+$dark-orange: #c25034 !important;
+$red: #df1021 !important; 
+
+// Background
+.bg-dark-grey {
+  background-color: $dark-grey;
+}
+.bg-white { 
+  background-color: $white;
+}
+.bg-orange { 
+  background-color: $orange;
+}
+/* Texte */
+.text-primary {
+    color: $dark-grey;
+}
+.text-secondary {
+    color: $orange;
+}
+.text-dark {
+    color: $black;
+}
+.text-light {
+    color: $white;
+}
+.text-orange {
+    color: $orange;
+}
+.text-red {
+    color: $red;
+}
+// Typography
+$font-primary: 'Montserrat', sans-serif;
+$font-size-base: 1rem;
+$line-height-base: 1.5;

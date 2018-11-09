@@ -1,0 +1,21 @@
+// Fonts
+@import "fonts";
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+// Variables
+@import "variables";
+@import "ui-kit";
+// Utilities
+@import "utilities";
+/* ELEMENTS */
+@import "header"; 
+@import "footer";
+@import "slick";
+@import 'contact';
+@import 'table';
+/* PAGES */
+@import "home";
+// responsive
+@import "responsives";
+/* Hack CSS */
+@import "hackcss";
