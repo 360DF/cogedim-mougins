@@ -4,5 +4,5 @@ Homestead.json
 Homestead.yaml
 .env
 .env-prod
-/public/pd
+/public/pdf
 /node_modules
