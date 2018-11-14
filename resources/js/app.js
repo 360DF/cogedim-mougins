@@ -19,12 +19,11 @@ $(document).ready(function(){
         var page = $(this).attr('href'); 
         var speed = 750; 
         var offset = page == '#contact' ? 100 : 0;
+        if(page == '#maquette-orbitale') offset = 100;
         $('html, body').animate( { scrollTop: $(page).offset().top - offset}, speed ); 
         return false;
     });
     
-    
-
     $('.slide-team').slick({
       dots: true,
       infinite: true,
@@ -150,6 +149,7 @@ $(document).ready(function(){
         }
       }, 500);
     });  
+    
     // CHECK AND SET COOKIES
       var cookies = checkCookie();
       if(cookies == true) {
@@ -196,7 +196,5 @@ $(document).ready(function(){
               return false;
           }
       }
-      
 
-      
 });

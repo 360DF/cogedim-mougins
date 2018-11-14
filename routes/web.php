@@ -18,6 +18,6 @@ $app->get('/confirmation', [
     'as' => 'confirmation', 'uses' => 'PageController@confirmation']
 );
 $app->get('/test', [
-    'as' => 'test', 'uses' => 'PageController@test']
+    'as' => 'test', 'uses' => 'PageController@index']
 );
 $app->post('/contact', ['as' => 'contact', 'uses' => 'PageController@contact']);

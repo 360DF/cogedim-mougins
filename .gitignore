@@ -6,3 +6,4 @@ Homestead.yaml
 .env-prod
 /public/pdf
 /node_modules
+/storage

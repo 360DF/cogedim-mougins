@@ -52,11 +52,6 @@
           </div>
           <h1>du studio au 5 pièces duplex
           <span>avec de généreuses terrasses aux vues dégagées*</span></h1>
-          <div class="box-info-orange">
-            <span class="n1">Jusqu’à <b>13 000 € offerts(2)</b></span> 
-            <span class="n2">POUR aménager votre appartement</span>
-            <span class="n3">Offre réservée aux 20 premiers réservataires</span> 
-          </div>
         <!--
           <a href="#contact" class="contact transition position-sticky mx-auto">Contactez-nous <img src="/img/icon-timer.png"></a>
           -->
@@ -105,8 +100,12 @@
                   <a class="nav-link hvr-overline-from-center js-scrollTo" href="#prix" target="_blank">Les prix</a>
                 </li>
                 <li class="nav-item">
+                  <a class="nav-link hvr-overline-from-center js-scrollTo" href="#maquette-orbitale" target="_blank">Visite 3D</a>
+                </li>
+                <li class="nav-item">
                   <a class="nav-link js-scrollTo nav-contact transition d-none d-lg-block" href="#contact">Contactez-nous <img src="/img/icon-timer.png"> </a>
                 </li>
+                
               </ul>
             </div>
             
@@ -377,7 +376,11 @@
           <img src="/img/img-circle-3.jpg" class="img-round shadow">
           <div class="bg-dark-grey  box-text">
             <h2 class="title text-left text-uppercase text-light">Rendez-vous sur notre <span>espace de vente</span></h2>
-            <p class="text-light"><img src="/img/icon-map.png" class="icon-map"> <b>121, rue des Bas à Asnières-sur-Seine</b> <span>-</span> Ouvert de 11h à 19h</p>
+            <p class="text-light"><img src="/img/icon-map.png" class="icon-map"> 
+              <b>121, rue des Bas à Asnières-sur-Seine</b> <br><br>
+              Ouvert du lundi au vendredi de 14H à 19H <!--<span>-</span> --><br>
+              Le samedi et le dimanche de 10H30 à 12H30 et de 14H à 19H
+            </p>
           </div>
         </div>
       </div>
@@ -387,12 +390,12 @@
 <section id="prix" class="section inter">
   <div class="container">
     <div class="row">
-      <div class="col-12 col-lg-8 mx-auto text-center">
+      <div class="col-12 col-lg-8 mx-auto text-center mb40">
         
-        <p class="sub-title">les prix et offres de lancement</p>
-        <p class="title"><span>les 10 & 11 novembre</span> Soyez les premiers à profiter de nos offres de lancement !</p>
+        <!--<p class="sub-title">les prix et offres de lancement</p>-->
+        <p class="title">Soyez les premiers à découvrir les plans 2D et 3d des appartements</p>
        
-        <div class="infos-offre orange mx-auto shadow">
+        <!--<div class="infos-offre orange mx-auto shadow">
           <span class="n1">Jusqu’à</span>
           <span class="n2">13 000 € offerts <supp>(2)</supp></span>
           <span class="n3">POUR aménager</span>
@@ -400,7 +403,7 @@
           <span class="n4">Offre réservée aux 20 premiers réservataires</span>
         </div>
         
-        <img src="/img/icon-more.png" class="mt40 mb40">
+        <img src="/img/icon-more.png" class="mt40 mb40">-->
         
       </div>
     </div>
@@ -450,7 +453,7 @@
                       <th scope="col" class="text-left">Lot</th>
                       <th scope="col" class="text-center">Annexes</th>
                       <th scope="col" class="text-center">Surface</th>
-                      <th scope="col" class="text-center">Plan</th>
+                      <th scope="col" class="text-center">Plans 2D & 3D</th>
                       <th scope="col" class="text-center">Contact</th>
                     </tr>
                   </thead>
@@ -473,10 +476,113 @@
           @endforeach
           
         </div> 
-
+      </div>
+    </div>
   </div>
 </section>
-
+<section id="maquette-orbitale">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 d-flex flex-column align-items-center justify-content-between">
+        <h2 class="text-center">découvrez la résidence artchipel en 3d</h2>
+        <p class="text-center">
+          <a href="https://widgets.habiteo.com/vue-generale?id=4ZjVj5Y5V3u1NdTpT9KJ2X&key=z3CVvKYxLYt5CvohUq0SR" target="_blank">
+            la visite virtuelle de la résidence c'est par ici:
+          </a>
+        </p>
+        <a href="https://widgets.habiteo.com/vue-generale?id=4ZjVj5Y5V3u1NdTpT9KJ2X&key=z3CVvKYxLYt5CvohUq0SR" target="_blank">
+          <img src="/img/360.png" class="img-fluid d-block transition" />
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="visites-virtuelles">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <p class="text-center">
+         DÉCOUVREZ LES VISITES VIRTUELLES
+        </p>
+      </div>
+      <div class="col-12 col-md-10 mx-auto">
+        <div class="row d-flex justify-content-between align-items-center flex-wrap">
+          <div class="col-12 col-sm-6 col-lg-3 d-flex flex-column align-items-center mb20">
+            <p class="typo-titre">
+              studio
+            </p>
+            <p class="typo-example">
+              (exemple du lot D203)
+            </p>
+            
+            <a href="https://widgets.habiteo.com/visite-virtuelle?id=2fvWaTM5XBOGnUXDMaVwtm&key=z3CVvKYxLYt5CvohUq0SR" target="_blank">
+              <img src="/img/D-203.png" class="img-fluid" />
+            </a>
+            <a href="https://widgets.habiteo.com/visite-virtuelle?id=2fvWaTM5XBOGnUXDMaVwtm&key=z3CVvKYxLYt5CvohUq0SR" target="_blank" class="link-visites">
+              Je découvre
+            </a>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 d-flex flex-column align-items-center mb20">
+            <p class="typo-titre">
+              2 pièces
+            </p>
+            <p class="typo-example">
+              (exemple du lot c201)
+            </p>
+            <a href="https://widgets.habiteo.com/visite-virtuelle?id=1ojfCScnMLRkjPmJi3vgd1&key=z3CVvKYxLYt5CvohUq0SR" target="_blank">
+              <img src="/img/c-201.png" class="img-fluid" />
+            </a>
+            <a href="https://widgets.habiteo.com/visite-virtuelle?id=1ojfCScnMLRkjPmJi3vgd1&key=z3CVvKYxLYt5CvohUq0SR" target="_blank" class="link-visites">
+              Je découvre
+            </a>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 d-flex flex-column align-items-center mb20">
+            <p class="typo-titre">
+              3 pièces
+            </p>
+            <p class="typo-example">
+              (exemple du lot F001)
+            </p>
+            <a href="https://widgets.habiteo.com/visite-virtuelle?id=5SWuQ52jEd4TPMn8rgQUEq&key=z3CVvKYxLYt5CvohUq0SR" target="_blank">
+              <img src="/img/F-001.png" class="img-fluid" />
+            </a>
+            <a href="https://widgets.habiteo.com/visite-virtuelle?id=5SWuQ52jEd4TPMn8rgQUEq&key=z3CVvKYxLYt5CvohUq0SR" target="_blank" class="link-visites">
+              Je découvre
+            </a>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 d-flex flex-column align-items-center mb20">
+            <p class="typo-titre">
+              4 pièces duplex
+            </p>
+            <p class="typo-example">
+              (exemple du lot I302)
+            </p>
+            <a href="https://widgets.habiteo.com/visite-virtuelle?id=4S6ehfFCadRS2cAg4bSCEX&key=z3CVvKYxLYt5CvohUq0SR" target="_blank">
+              <img src="/img/I-302.gif" class="img-fluid" />
+            </a>
+            <a href="https://widgets.habiteo.com/visite-virtuelle?id=4S6ehfFCadRS2cAg4bSCEX&key=z3CVvKYxLYt5CvohUq0SR" target="_blank" class="link-visites">
+              Je découvre
+            </a>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 d-flex flex-column align-items-center mb20">
+            <p class="typo-titre">
+              5 pièces
+            </p>
+            <p class="typo-example">
+              (exemple du lot C502)
+            </p>
+            <a href="https://widgets.habiteo.com/visite-virtuelle?id=48XDZFshBmnhSe5zxPWHP7&key=z3CVvKYxLYt5CvohUq0SR" target="_blank">
+              <img src="/img/c-502.png" class="img-fluid" />
+            </a>
+            <a href="https://widgets.habiteo.com/visite-virtuelle?id=48XDZFshBmnhSe5zxPWHP7&key=z3CVvKYxLYt5CvohUq0SR" target="_blank" class="link-visites">
+              Je découvre
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 <div id="conditions" class="section">
   <div class="container">
     <div class="row">
@@ -552,7 +658,7 @@
 ** Source Google Maps.<br />
 <supp><b>(1)</b></supp> TVA à taux réduit à 5.5% selon l’article 278 sexies 11° du Code Général des Impôts, sous réserve d’une modification de la réglementation en vigueur. Sous conditions d’éligibilité. Se renseigner sur l’espace de vente.<br />
 
-<supp><b>(2)</b></supp> Offre sous la forme d’une remise sur le prix de vente du bien immobilier payé par l’acheteur dont la valeur est calculée sur la base de 2% du prix de vente TTC du bien acquis ou sous forme de cartes cadeaux d’un montant équivalent. Offre non cumulable avec toute autre offre en cours ou à venir. Offre réservée exclusivement aux 20 premiers réservataires pour l’achat d’un appartement neuf dans la résidence Artchipel à Asnières-sur-Seine pour toute réservation signée entre les 10 et 11 novembre 2018, sous réserve d'une signature notariée régularisée dans un délai de 2 mois suivant la date réservation et sous réserve de disponibilité des stocks.<br />
+<!--<supp><b>(2)</b></supp> Offre sous la forme d’une remise sur le prix de vente du bien immobilier payé par l’acheteur dont la valeur est calculée sur la base de 2% du prix de vente TTC du bien acquis ou sous forme de cartes cadeaux d’un montant équivalent. Offre non cumulable avec toute autre offre en cours ou à venir. Offre réservée exclusivement aux 20 premiers réservataires pour l’achat d’un appartement neuf dans la résidence Artchipel à Asnières-sur-Seine pour toute réservation signée entre les 10 et 11 novembre 2018, sous réserve d'une signature notariée régularisée dans un délai de 2 mois suivant la date réservation et sous réserve de disponibilité des stocks.<br />-->
 
 <supp><b>(3)</b></supp> Prix en TVA à 20% sur la base de la grille de prix en vigueur au 22/10/18. <br />
 <supp><b>(4)</b></supp> Valable pour tous les prêts à taux zéro émis à partir du 1er janvier 2016 pour l’acquisition par un primo-accédant de sa résidence principale neuve. Attribution du prêt soumise à conditions notamment de ressources, voir Décret n° 2015-1813 du 29 décembre 2015. <br />

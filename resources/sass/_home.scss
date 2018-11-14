@@ -17,7 +17,7 @@
       }
       .text-right-slider {
         position: absolute;
-        top: 0;
+        top: -50px;
         bottom: 0;
         align-items: center;
         right: 0;
@@ -338,8 +338,8 @@
   .box-text {
     margin-left: 200px;
     margin-top: 50px;
-    padding: 30px 30px 30px 120px;
-    height: 200px;
+    padding: 15px 30px 15px 120px;
+    height: 220px;
   }
   .icon-map {
     margin-right: 20px;
@@ -404,6 +404,49 @@
   }
 }
 
+#maquette-orbitale {
+  background-color: #EBA73A;
+  padding: 5rem 10px!important;
+  h2 {
+    color: #fff!important;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  a {
+    color: #fff!important;
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+  .transition:hover {
+    opacity: 0.5;
+  }
+}
+
+#visites-virtuelles {
+  padding: 0 10px!important;
+  font-size: 32px;
+  .typo-titre {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 0;
+    margin-top: 16px;
+  }
+  .typo-example {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .link-visites {
+    border-radius: 30px;
+    background-color: $orange;
+    color: #fff!important;
+    font-size: 14px;
+    padding: 5px 10px!important;
+    margin-top: 15px;
+    text-decoration: none;
+  }
+}
 #conditions {
   .title {
     font-size: 32px !important;
