@@ -48,7 +48,7 @@ class PageController extends Controller
             'telephone' => $request->input('telephone'),
             'ville' => $request->input('ville'),
             'optin' => $request->input('optin', 'NON'),
-            'projet' => $request->input('type-demande'),
+            'projet' => $request->input('projet'),
         ]);
         //SEND CONTACT VIA MAILGUN
         $msg = 'Bonjour, <br><br>
