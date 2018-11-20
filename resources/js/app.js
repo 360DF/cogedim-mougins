@@ -1,70 +1,15 @@
 
+require('./bootstrap');
+
 $(document).ready(function(){
-  /*$(function() {
-      $.scrollify({
-        section : ".section",
-        interstitialSection : ".inter",
-        scrollbars: true,
-        overflowScroll: true,
-        scrollSpeed: 1200,
-        setHeights: true
-      });
-    });*/
     
-    //$("#sticker").sticky({topSpacing:0, bottomSpacing: 100});
-    $('.navbar-nav>li>a').on('click', function(){
-        $('.navbar-collapse').collapse('hide');
-    });
+    $("#stickier").sticky({topSpacing:0, bottomSpacing: 0});
     $('.js-scrollTo').on('click', function() { 
         var page = $(this).attr('href'); 
         var speed = 750; 
         var offset = page == '#contact' ? 100 : 0;
-        if(page == '#maquette-orbitale') offset = 100;
         $('html, body').animate( { scrollTop: $(page).offset().top - offset}, speed ); 
         return false;
-    });
-    
-    $('.slide-team').slick({
-      dots: true,
-      infinite: true,
-      speed: 300,
-      slidesToShow: 4,
-      slidesToScroll: 1,
-      responsive: [
-        {
-          breakpoint: 1200,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            infinite: true,
-            dots: true
-          }
-        },
-        {
-          breakpoint: 992,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 1
-          }
-        },
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 1
-          }
-        },
-        {
-          breakpoint: 576,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-          }
-        }
-        // You can unslick at a given breakpoint now by adding:
-        // settings: "unslick"
-        // instead of a settings object
-      ]
     });
     
     /// FORM
@@ -110,7 +55,6 @@ $(document).ready(function(){
     	else
     		$('.link_sticky').fadeOut(600);
     });
-    
 
     /// RETURN TOP
     $('body').append('<a href="#top" class="top_link retour-top" title="Revenir en haut de page"></a>');
@@ -129,6 +73,11 @@ $(document).ready(function(){
       'background-color' : '$dark-grey',
     });
     
+    $('.retour-top').click(function(e) {
+      e.preventDefault();
+      $('html, body').animate( { scrollTop: $('#top').offset().top}, 750 ); 
+      
+    })
      $(window).scroll(function(){
     	posScroll = $(document).scrollTop();
     	if(posScroll >=550) 
@@ -137,18 +86,6 @@ $(document).ready(function(){
     		$('.top_link').fadeOut(600);
     });
     
-    // SWITCH MORE LESS CLASS
-    $('.toggler').click(function(e) {
-      console.log($(this).data('target'));
-      var page = $(this).data('target'); 
-      var speed = 750; 
-      //$('html, body').scrollTo(page)
-      setTimeout(function() {
-        if ($(page).css('display') != 'none') {
-          $('html, body').animate( { scrollTop: $(page).offset().top - 200 }, speed ); 
-        }
-      }, 500);
-    });  
     
     // CHECK AND SET COOKIES
       var cookies = checkCookie();

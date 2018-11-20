@@ -22,7 +22,9 @@
     "vue": "^2.5.7"
   },
   "dependencies": {
-    "sass-google-fonts": "^1.0.1",
+    "@fortawesome/fontawesome-free": "^5.5.0",
+    "jquery-sticky": "^1.0.4",
+    "select2": "^4.0.6-rc.1",
     "slick-carousel": "^1.8.1"
   }
 }

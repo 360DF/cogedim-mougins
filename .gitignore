@@ -1,9 +1,6 @@
-/vendor
 /.idea
 Homestead.json
 Homestead.yaml
-.env
-.env-prod
+.env.dev
 /public/pdf
-/node_modules
-/storage
+/storage/framework/cache

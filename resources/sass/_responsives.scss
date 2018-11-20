@@ -1,722 +1,219 @@
-@media (min-width: 992px) and (max-width: 1269px) {
-    #topSlider {
-        .logo-slider {
-            top: 10px !important;
-            left: 10px !important;
-        }
-        .text-bottom-slider {
-            width: 80% !important;
-        }    
-        .text-bottom-slider .orange-icon {
-            padding-right: 30px !important;
-        }
-    }
+@media (max-width: 1200px) {
     header {
-        .logo {
-            max-height: 55px;
-        }
-        .nav-link {
-            margin-right: 0.8rem !important;
-            margin-left: 0.8rem !important;
-            padding-right: 0rem !important;
-            padding-left: 0rem !important;
-        }
-    }
-    #presentation {
-        .title {
-            font-size: 70px !important;
-            line-height: 70px !important;
-        }
-        .sub-title {
-            font-size: 16px !important;
-        }
-    }
-    #appartements, #residence, #quartier {
-        ul.custom-list {
-            padding: 0;
-        }
-        .title {
-            font-size: 24px !important;
-        }
-        .img-round {
-            top: -60px;
-            left: -15px;
-            max-width: 220px;
-        }
-        .infos-offre {
-            &.right {
-                right: 54% !important;
-            }
-            &.left {
-                left: 50px !important;
-            }   
-        }
-    }
-    #adresse .title {
-        font-size: 18px !important;
-    }
-    #slider-transport #slider-map .carousel-item {
-        background-size: contain;
-    }
-    /* TABLE */
-    .table {
-      .red {
-        font-size: 18px !important;
-        supp {
-          top: -4px;
-        }
-      }
-      .tva-table {
-        top: -160%;
-        width: 80px;
-      }
-    }
-}    
-@media (max-width: 992px) {
-
-    section {
-        margin: 3rem 0 !important;
-        padding: inherit !important;
-    }
-    header {
-        padding: 15px;
-        &.sticky-top {
-            position: fixed !important;
-            top: 0;
-            width: 100%;
-        }
-        .navbar-light .navbar-toggler {
-            border-color: rgba(0, 0, 0, 0);
-        }
-        .logo {
-            height: inherit;
-            max-height: inherit;
-            width: 220px;
-        }
-        .navbar-toggler {
-            right: inherit;
-            position: relative;
-            padding: inherit;
-            font-size: 1.5rem;
-            line-height: 1;
-            background-color: white;
-            border: 1px solid transparent;
-            border-color: rgba(0, 0, 0, 0);
-            border-radius: 0;
-        }
-        .navbar-light .navbar-toggler-icon {
-            background-image: url(/img/burger-nav.png);    
-            background-size: auto;
-        }
-    }
-    
-    #topSlider {
-        margin: 80px 0 0 0 !important;
-        .text-right-slider {
-           display: none !important;
-        }
-        .infos-offre {
-            padding: 10px;
-            margin-top: 15px;
-            text-align: center;
-            position: relative;
-            bottom: inherit;
-            max-width: 100%;
-            max-height: inherit;
-            .n1 {
-                font-size: 22px;
-                font-weight: 600;
-                display: block;
-            }
-            .n2 {
-                font-size: 14px;
-                font-weight: 400;
-                display: block;
-            }
-        }
-        .carousel-item {
-            height: inherit;
-            min-height: 300px;
-        }
-        .tva-slider {
-            top: -50px;
-            left: 10px;
-            max-width: 60px;
-        }
-        h1 {
-            font-size: 26px;
-            font-weight: 600;
-            text-transform: uppercase;
-            margin: 20px 0;
-            span {
-               font-size: 14px;
-                font-weight: 400;
-                display: block; 
-            }
-        }
-        .box-info-orange {
-            background-color: $orange;
-            padding: 10px;
-            color: $white;
-            .n1 {
-                font-size: 18px;
-                font-weight: 600;
-                display: block;
-                text-transform: uppercase;
-                padding-bottom: 10px;
-                b {
-                   font-size: 22px; 
-                }
-            }
-            .n2 {
-                font-size: 18px;
-                font-weight: 600;
-                display: block;
-                text-transform: uppercase;
-                padding-bottom: 10px;
-            }
-            .n3 {
-                font-size: 14px;
-                font-weight: 400;
-                display: block;
-            }
-        }
-        .contact {
-            background-color: $dark-grey;
-            color: $white;
-            padding: 15px 0;
-            line-height: 30px;
-            text-transform: uppercase;
-            margin: 20px 0;
-            text-align: center;
-            display: block;
-            width: 100%;
-            &:hover {
-                background-color: $orange;
-            }
-            img {
-                margin-left: 20px;
-            }
-        }
-    }
-     
-    #presentation {
-        background-image: none !important;
-        .bg-right {
-            background-image: none !important;
-        }
-        .title {
-            font-size: 40px !important;
-            line-height: 70px !important;
-            padding-top: 0px;
-            font-weight: 100;
-            text-transform: uppercase;
-        }
-        .sub-title {
-            font-size: 20px !important;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
-        .block {
-            padding: 40px 0 0 0;
-            text-align: justify;
-        }
-    }
-    
-    #appartements, #residence, #quartier {
-        ul.custom-list {
-            padding: 0;
-        }
-        .title {
-            padding-top: 45px;
-            padding-left: 38px;
-            line-height: 24px;
-            font-size: 22px !important;
-            font-weight: 200;
-            margin-left: -15px;
-            span {
-              font-weight: 700;
-              display: block;
-              font-size: 20px;
-            }
-        }
-        .img-round {
-          display: none;
-        }
-        .btn-primary {
-          display: none;
-        }
-        .carousel-inner {
-            width: 95%;
-            margin: 0 auto;
-        }
-        .carousel-item {
-            min-height: 220px !important;
-            /*margin-top: 40px;*/
-        }
-        .infos-offre {
-            padding: 10px !important;
-            text-align: center !important;
-            position: relative !important;
-            display: block !important;
-            bottom: 0 !important;
-            max-width: 90% !important;
-            margin: 0 auto !important;
-            max-height: inherit !important;
-            margin-bottom: 40px !important;
-            &.right {
-                right: 0 !important;
-            }
-            &.left {
-                left: 0 !important;
-            }   
-        }
-    }
-    
-    #appartements .title {
-        background-image: url(/img/les-appartements-mob.png);
-    }
-    #residence .title {
-        background-image: url(/img/la-residence-mob.png);
-    }
-    #quartier .title {
-        background-image: url(/img/le-quartier-mob.png);
-    }
-    
-    #transport {
-        .title {
-            font-size: 24px !important;
-        }
-    }
-   
-    #slider-transport {
-      background-image: none;
-      #slider-map {
-        .carousel-item {
-          min-height: 265px;
-          background-size: contain;
-        }
-      }  
-    }
-    
-    #adresse {
-        padding: inherit;    
-        margin-top: 120px;
-        .img-round {
-            top: -80px;
-            left: 0;
-            right: 0;
-            margin: 0 auto;
-            max-width: 250px !important;
-        }
-        .box-text {
-            margin-left: inherit;
-            margin-top: inherit;
-            padding: 0;
-            height: auto;
-            margin: 0 -15px !important;
-            padding: 210px 10px 20px 10px;
-        }
-        .title {
-            text-align: center !important;
-            span {
-                font-weight: 700;
-                font-size: 22px;
-                display: block;
-            }
-        }
         p {
-            font-size: 14px;
-            text-align: center !important;
-            img {
-                display: none;
-            }
-            span {
-                display: none;
-            }
+            font-size: 1rem;
         }
     }
-    
-    #prix {
-        .title {
-            font-size: 20px !important;
-            line-height: 22px;
-        }
-        #prix .infos-offre {
-            max-width: 100%;
-            max-height: auto;
-            padding: 10px;
-            margin-top: 20px;
-            position: initial !important;
-            left: initial !important;
-            bottom: initial !important;
-        }
-        .d-destock {
-            display: none;
-        }
-        .table-mob {
-            position: relative;
-            .tva {
-                position: absolute;
-                top: 8px;
-                left: 0 !important;
-                right: 0 !important;
-                margin: 0 auto !important;
+    #contain {
+        #col-left {
+            .cta-top {
+                margin: -72px;
+                font-size: 1rem;
+                padding: 1.5rem 0;
             }
-            .header-table {
-                background-color: $dark-grey;
-                color: $white;
-                text-transform: uppercase;
-                padding: 10px 15px;
-                .t1 {
-                    font-size: 18px;
-                    font-weight: 600;
+            .block {
+                padding: 20px;
+                h3 {
+                    font-size: 1.2rem !important;
                 }
-                .t2 {
-                    font-size: 16px;
-                    font-weight: 600;
+                .nmb-appartments {
+                    font-size: 5.5rem;
+                    line-height: 5.5rem;
                 }
-                .t3 {
-                    font-size: 12px;
-                    font-weight: 400;
+                .detail-appartments {
+                    font-size: 1rem;
                 }
-            }
-            .header-table-red {
-                background-color: $dark-grey;
-                color: $white;
-                text-transform: uppercase;
-                padding: 10px 15px;
-                background-image: url(/img/table-red-bg.png);
-                background-repeat: no-repeat;
-                background-position: 125% 0;
-                .t1 {
-                    font-size: 18px;
-                    font-weight: 600;
+                .appartments {
+                    font-size: 1.85rem;
                 }
-                .t2 {
-                    font-size: 16px;
-                    font-weight: 600;
-                }
-                .t3 {
-                    font-size: 18px;
-                    font-weight: 600;
-                    position: relative;
-                    top: 15px;
-                }
-            }
-            .contain-table {
-                padding: 15px;
-                background-color: #f8f8f8;
-                color: $dark-grey;
-                margin-bottom: 10px;
-                .row {
-                    padding-bottom: 20px;
-                }
-                .t1 {
-                    font-size: 14px;
-                    font-weight: 400;
+                .price {
+                    font-size: 1rem;
+                    b {
+                        font-size: 1.4rem;
+                    }
                 }
             }
         }
         
-        .card-header {
-            .t1 {
-                width: 15%;
-                padding-top: 3.2px;
-            }
-            .t2 {
-                width: 45%;
-            }
-            .t3 {
-               width: 40%;
-            }
-            img.tva {
-                margin-left: 5px;
+        #section-right {
+            .about-group {
+                h3 {
+                    font-size: 1.2rem;
+                    img {
+                        height: 30px;
+                    }
+                }    
             }
         }
     }
-    
-    #maquette-orbitale {
-        h2 {
-            @media(max-width: 768px) {
-                font-size: 22px!important;
-            }
-        }
+    ul.custom-list.light {
+        padding: 0 0 0 20px;
     }
-    
-    #conditions {
-        .title {
-            font-size: 20px !important;
-            margin-top: 10px;
-            span {
-                font-size: 19px;
-            }
-        }
-         img {
-            margin-top: inherit;
-            margin-bottom: 40px;
-        }
-        p.border-spe {
-            border-top: none !important;
-            padding-top: 40px !important;
-            background-image: url(/img/black-line.png);
-            background-repeat: no-repeat;
-            background-position: center top;
-            margin-bottom: 60px;
-        }
-    }
-    
-    #contact {
-        .bg-left-form {
-            #form-card {
-                #form-card-header {
-                    h2 {
-                        font-size: 19px !important;
-                        padding: 0 10px;
-                        margin-bottom: 20px;
-                    }
-                }
-                #form-card-body {
-                    width: 94%;
-                    margin: 0 auto;
-                    padding: 30px 20px;
-                    .control-group #mme .control-span {
-                        font-size: 14px;
-                        padding-right: 10px;
-                    }
-                    .control-group #mr .control-span {
-                        font-size: 14px;
-                        padding-left: 0;
-                    }
-                    .control-group {
-                        margin-bottom: 20px;
-                    }
-                    .actions .action {
-                        padding: 14px 25px;
-                        margin-bottom: 40px;
-                        width: 110px;
-                    }
-                    #submit-btn {
-                        margin-top: 30px;
-                        margin-bottom: 30px;
-                    }
-                }
-            }
-        }
-        #form-card-footer {
-            background-image: url(/img/contact-line.png);
-            background-repeat: no-repeat;
-            background-size: inherit;
-            background-position: center;
-            z-index: 100;
-            height: 20px;
-            margin: 0 -15px;
-        }
-    }
-    
-    footer {
-        .t1 {
-            margin-bottom: 10px !important;
+}  
+@media (max-width: 992px) {
+    header {
+        .text-orange {
             display: block;
         }
-        img {
-            margin-bottom: 40px !important;
-            display: block;
-            margin: 0 auto;
-        }
-        .tel {
-            margin-top: 40px;
-        }
-        .info {
-            margin-bottom: 20px;
-        }
     }
-    
+    #top {
+        .contain {
+            .quote {
+                background-color: rgba(255, 255, 255, 1);
+                border-radius: 0;
+            }
+        }   
+    }
+    #contain {
+        #col-left {
+            .cta-top {
+                margin: 0 !important;
+                max-width: none !important;
+             }
+        }
+        #section-right {
+            margin-left: 0;
+            padding: 20px 20px 40px 20px;
+            .bg-img1 {
+                border-right: 5px solid white;
+                max-height: 400px;
+            }
+            .bg-img2 {
+                border-left: 5px solid white;
+                max-height: 400px;
+            }
+        }
+        #section-left.bg-orange {
+            margin-bottom: 0;
+        }
+    }   
 }    
-@media (max-width: 768px) {
-    #transport {
-        .title {
-            font-size: 24px !important;
-        }
-        .margin-mob {
-            margin-top: 40px;
+@media (max-width: 767.98px) {
+    header {
+        .rcp {
+            margin: 0 0 30px 0;
         }
     }
-    #prix {
-        .header-table-red {
-            background-position: 150% 0 !important;
-        }
-        .card-header {
-            .t1 {
-                width: 16%;
-            }
-            .t2 {
-                width: 44%;
-            }
-            .t3 {
-                line-height: 64px;
-            }
-            strong {
-              font-size: 1rem;
+    #contain {
+        #section-left  {
+            .title {
+                padding-left: 0;
             }
         }
-    }
-    #contact {
-        .bg-left-form {
-            background-image: none;
-            background-color: $white;
+        #section-right {
+            .bg-img1 {
+                max-height: 350px;
+            }
+            .bg-img2 {
+                max-height: 350px;
+            }
         }
+    }   
+    .border-right, .border-left  {
+        border: none !important;
     }
 }
 @media (max-width: 576px) {
-    #prix {
-        .header-table-red {
-            background-position: 565% 0 !important;
+    header {
+        .logo {
+            max-height: 70px;
         }
-        .infos-offre {
-            max-height: inherit;
+        .rcp {
+            max-height: 70px;
         }
-        .card-header {
-            height: 64px;
-            line-height: 61px;
-            .t1 {
-              float: left;
-              width: 25% !important;
-              padding-left: 3%;
-              text-transform: uppercase;
-              font-size: 12px;
-              padding-top: 0;
+        h1 {
+            font-size: 1.7rem;
+        }
+    }
+    #top {
+        background-size: cover;
+        .contain {
+            min-height: 480px;
+            h2 {
+                font-size: 1.5rem !important;
             }
-            .t2 {
-              float: left;
-              text-align: right;
-              padding-right: 2%;
-              width: 40%;
-              display: none;
-            }
-            .t3 {
-              float: left;
-              height: 64px;
-              background-position: 0px 0px;
-              text-transform: lowercase;
-              width: 75%;
-              padding-left: inherit;
-              text-align: right;
-              font-size: 12px;
-              &:before {
-                  content: "à partir de ";
-              }
-              img.tva {
-                    margin-left: 5px;
-                    margin-right: 10px;
-              }
-            }
-            strong {
-              font-size: inherit;
-            }
-            small {
-                font-size: 0.8rem;
-                text-transform: lowercase;
-            }
-            img.tva {
-              height: 40px;
-              width: auto;    
-              margin-left: 15px;
-            }
-            .more-less {
-                background-repeat: no-repeat;
-                background-position: 0 0;
-                height: 30px;
-                width: 30px;
-                background-size: 15px;
-                position: absolute;
-                right: 0px;
-                top: 25px;
+            .quote {
+                padding: 1rem;
+                text-align: justify;
+                border-radius: 0;
+                margin-top: 0;
+                img {
+                    position: absolute;
+                    top: -45px;
+                    left: 15px;
+                }
             }
         }
     }
-    
-    .contact-sticky {
-        text-align: inherit !important;
-        //padding-left: 15%;
-    }
-
-    .table .thead-dark th {
-        font-size: 12px;
-    }
-    .table th, .table td {
-        padding: 0.25rem;
-        font-size: 12px;
-    }
-    .table .table-plan {
-        background-size: 40px;
-    }
-    .table .table-mail {
-        background-size: 40px;
-    }
-}
-@media (max-width: 425px) {
-    #prix {
-        .card-header {
-            .t1 {
-              float: left;
-              width: 21% !important;
-              padding-left: 3%;
-              text-transform: uppercase;
-              font-size: 10px;
-              padding-top: 0;
+    #contain {
+        #col-left {
+            .block {
+                padding: 20px;
             }
-            .t3 {
-              float: left;
-              height: 64px;
-              background-position: 0px 0px;
-              text-transform: lowercase;
-              width: 79%;
-              padding-left: inherit;
-              text-align: right;
-              font-size: 12px;
-              padding-right: 27px !important;
-              &:before {
-                  content: "à partir de ";
-              }
-              img.tva {
-                    margin-left: 5px;
-                    margin-right: 10px;    
-                    height: 25px;
-              }
-            }
-            .t4 {
-              float: left;
-              height: 64px;
-              background-position: 0px 0px;
-              text-transform: lowercase;
-              width: 79%;
-              padding-left: inherit;
-              text-align: right;
-              font-size: 12px;
-              padding-right: 27px !important;
-              img.tva {
-                    margin-left: 5px;
-                    margin-right: 10px;    
-                    height: 25px;
-              }
-            }
-            img.tva {
-              height: 25px;
-              width: auto;    
-              margin-left: 15px;
-            }
-            .more-less {
-                background-repeat: no-repeat;
-                background-position: center;
-                height: 40px;
-                width: 40px;
-                background-size: 15px;
-                position: absolute;
-                right: -2px;
-                top: 10px;
+             .cta-top {
+                margin: 0;
+                font-size: 1.2rem;
             }
         }
+        #section-right {
+            margin-left: 0;
+            .bg-img1 {
+                max-height: 300px;
+            }
+            .bg-img2 {
+                max-height: 300px;
+            }
+            .about-group {
+            margin: 0;
+                h3 {
+                    text-align: center;
+                    margin-top: 30px;
+                    img {
+                        height: 50px;
+                        float: inherit;
+                        position: relative;
+                        bottom: 0;
+                        display: block;
+                        margin: 0 auto;
+                    }
+                }
+                    
+                }
+            .mentions-legales {
+                margin: 0;
+                .phone a {
+                    font-size: 0.75rem;
+                }
+            }
+        }
+        #section-left {
+            margin-top: 0;
+            padding: 20px 20px 20px 20px;
+            &.bg-orange .title {
+                padding-left: 0;
+                text-align: center;
+            }
+        }
+    }
+    #contact {
+        #form-card {
+            padding: 0 10px;
+            #form-card-body {
+                padding: 50px 1rem;
+            }
+            #form-card-header h2 {
+                padding-top: 1rem !important;
+            }
+        }
+    }
+    .title {
+        font-size: 1.5rem !important;
+    }
+    .sub-title {
+        font-size: 1.25rem !important;
+    }
+    ul.custom-list.light {
+        padding: 0;
     }
 }
 @media (max-width: 375px) {

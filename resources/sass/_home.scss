@@ -1,477 +1,211 @@
-#topSlider {
-    margin: 0 !important;
-    padding: 0 !important;
-    position: relative;
-    overflow: hidden;
-    .carousel {
-      margin-top: 15px;
-    }
-      .logo-slider {
-        position: absolute;
-        top: 30px;
-        left: 30px;
-        width: 100%;
-        max-width: 600px;
-        height: auto;
-        z-index: 100;
-      }
-      .text-right-slider {
-        position: absolute;
-        top: -50px;
-        bottom: 0;
-        align-items: center;
-        right: 0;
-        justify-content: center;
-        width: 100%;
-        display: flex !important;
-        max-width: 380px;
-        height: auto; 
-        z-index: 50;
-        text-align: center;
-      }
-      .tva-slider {
-        position: absolute;
-        bottom: 25px;
-        left: 30px;
-        width: 100%;
-        max-width: 100px;
-        height: auto;
-        z-index: 100;
-      }
-      .text-bottom-slider {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        max-width: 940px;
-        height: 80px;
-        z-index: 10;
-        background-color: rgba(255, 255, 255, 0.9);
-        padding: 18px 0 0 0;
-        font-weight: 700;
-        font-size: 16px;
-        .orange-icon {
-          background-image: url(/img/picto-orange.png);
-          background-repeat: no-repeat;
-          background-position: 0 5px;
-          padding-left: 20px;
-          padding-right: 60px;
-          line-height: 23px;
-          span {
-            display: block;
-          }
-        }
-      }
-    .carousel-item {
-      height: 93vh;
-      min-height: 300px;
-      background: no-repeat center center scroll;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-    }
-    .carousel-caption {
-      bottom: 50px;
-    }    
-    .carousel-fade {
-      .carousel-inner {
-        .item {
-          transition-property: opacity;
-        }
-        .item, .active.left, .active.right {
-          opacity: 0;
-        }
-        .active, .next.left, .prev.right {
-          opacity: 1;
-        }
-        .next, .prev, .active.left, .active.right {
-          left: 0;
-          transform: translate3d(0, 0, 0);
-        }
-      }
-      .carousel-control {
-        z-index: 2;
-      }
-    }
-    .carousel-indicators .active {
-        background-color: $dark-grey;
-    }
-    .carousel-indicators li {
-        background-color: $white;
-    }
-    .carousel-control-prev, .carousel-control-next {
-      top: 65% !important;
-      bottom: inherit !important;
-      z-index: 100;
-    }
-    a {
-        text-decoration: none !important;
-    }
-} 
-
-#cta {
-  a {
-    text-decoration: none !important;
-  }
-  .cta {
-    background-color: $dark-grey;
-    /*background-image: url(/img/arrow-bottom-whyte.png);
+#top {
+    background-image: url(/img/img-top.jpg);
     background-repeat: no-repeat;
-    background-position: 135px 10px;*/
-    padding: 1rem;
-    max-width: 172px;
-    max-height: 60px;
-    margin-top: -30px;
-    margin-bottom: 30px;
-    color: $white;
-    text-decoration: none !important;
-    font-weight: 600;
-    position: relative;
-    z-index: 200;
-    float: right;
-    
-    /*&:hover {
-      background-image: url(/img/arrow-bottom-whyte.png);
-      background-repeat: no-repeat;
-      background-position: 135px 30px;
-    }*/
-    
-    img {
-      margin-left: 20px;
-    }
-  }  
-}
-
-#presentation {
-  background-image: url(/img/bg-a.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: 2% top;
-  .bg-right {
-    background-image: url(/img/bg-right.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: right top;
-  }
-  .title {
-    font-size: 80px !important;
-    line-height: 80px !important;
-    padding-top: 40px;
-    font-weight: 100;
-    text-transform: uppercase;
-    span {
-      font-weight: 600;
-    }
-  }
-  .sub-title {
-    font-size: 24px !important;
-    font-weight: 700;
-    text-transform: uppercase;
-  }
-  .block {
-    padding: 90px 55px 0 55px;
-    text-align: justify;
-  }
-}
-
-#appartements, #residence, #quartier {
-  ul.custom-list {
-    padding: 0 80px;
-  }
-  .title {
-    background-repeat: no-repeat;
-    background-position: left top;
-    padding-top: 13px;
-    min-height: 120px;
-    padding-left: 80px;
-    line-height: 28px;
-    font-size: 28px !important;
-    font-weight: 200;
-    margin-bottom: 60px;
-    span {
-      font-weight: 700;
-      display: block;
-    }
-  }
-  .img-round {
-      position: absolute;
-      top: -70px;
-      left: -30px;
-    }
-  
-}
-
-#appartements {
-  .title {
-    background-image: url(/img/les-appartements.png);
-    min-height: 130px;
-    padding-left: 90px;
-  }
-  #slider-appartements {
-    position: relative;
-    top: 0;
-    right: 0;
-    z-index: 10;
-    margin: 0 !important;
-    padding: 0 !important;
-    overflow: hidden;
-    .carousel-item {
-      min-height: 580px;
-      background: no-repeat center center scroll;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-    }
-  }
-}
-
-#residence {
-  .title {
-    background-image: url(/img/la-residence.png);
-  }
-  #slider-residence {
-    position: relative;
-    top: 0;
-    right: 0;
-    z-index: 10;
-    margin: 0 !important;
-    padding: 0 !important;
-    overflow: hidden;
-    .carousel-item {
-      min-height: 580px;
-      background: no-repeat center center scroll;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-    }
-  }
-}
-
-#quartier {
-  .title {
-    background-image: url(/img/le-quartier.png);
-  }
-  #slider-quartier {
-    position: relative;
-    top: 0;
-    right: 0;
-    z-index: 10;
-    margin: 0 !important;
-    padding: 0 !important;
-    overflow: hidden;
-    .carousel-item {
-      min-height: 580px;
-      background: no-repeat center center scroll;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-    }
-  }
-}
-
-#transport {
-  .title {
-    font-size: 32px !important;
-    font-weight: 100;
-    text-transform: uppercase;
-    span {
-      font-weight: 600;
-    }
-  }
-  .sub-title {
-    font-size: 12px !important;
-    font-weight: 200;
-    text-transform: uppercase;
-  }
-  img {
-    display: block;
+    background-size: cover;
+    max-width: 1440px;
+    background-position: center 50%;
     margin: 0 auto;
-    margin-bottom: 20px;
-  }
+    .contain {
+        min-height: 300px;
+        height: 78vh;
+         h2 {
+            font-size: 2rem !important;
+            line-height: 2rem !important;
+            margin-top: 10%;
+            color: $white;
+            text-transform: uppercase;
+            font-weight: 700;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+         }
+         .quote {
+             position: absolute;
+             bottom: 0;
+             right: 0;
+             font-weight: 300;
+             background-color: rgba(255, 255, 255, 0.9);
+             padding: 2rem 2rem;
+             text-align: justify;
+           -webkit-border-radius: 40px 0 0 0;
+            border-radius: 40px 0 0 0;
+             img {
+                position: absolute;
+                top: -35px;
+                left: 25px;
+             }
+         }
+    }
+}
+#contain {
+    #col-left {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0 !important;
+    //top: 84px !important;
+        .cta-top {
+            text-transform: uppercase;
+            width: 100%;
+            text-align: center;
+            margin: -84px;
+            font-size: 1.5rem;
+            font-weight: 600;
+            padding: 1.5rem 0;
+         }
+        .block {
+        padding: 40px 40px;
+            h3 {
+                font-size: 1.5rem !important;
+                line-height: 1.5rem !important;
+                text-transform: uppercase;
+                color: $dark-grey;
+                font-weight: 700;
+                border-bottom: 5px solid $white;
+                margin-bottom: 1.25rem;
+                padding-bottom: 1.25rem;
+                span {
+                    display: block;
+                    color: $orange;
+                }
+            }
+            .nmb-appartments {
+                color: $orange;
+                font-weight: 700;
+                font-size: 7.5rem;
+                line-height: 6.5rem;
+            }
+            .logo-grenelle {
+                max-width: 85px;
+            }
+            .appartments {
+                color: $black;
+                font-weight: 700;
+                font-size: 2rem;
+                line-height: 3rem;
+                text-transform: uppercase;
+            }
+            .parts-appartments {
+                text-transform: uppercase;
+                color: $black;
+                font-weight: 700;
+                font-size: 1.5rem;
+                line-height: 0rem;
+                margin-bottom: 1rem;
+                span {
+                    color: $orange;
+                }
+            }
+            .detail-appartments {
+                font-size: 1.2rem;
+                font-weight: 300;
+                color: $dark-grey;
+                margin: 2rem 0;
+            }
+            .price {
+              background-color: $orange;
+              padding: 1rem;
+              color: $white;
+              margin: 1rem 0;
+              font-size: 1.2rem;
+              font-weight: 300;
+              b {
+                font-size: 1.4rem;
+                font-weight: 700; 
+              }
+            }
+            .infos {
+                font-size:0.75rem;
+                font-weight: 300;
+                color: $dark-grey;
+            }
+        }
+    }
+    #section-right {
+      position: relative;
+      margin-left: 50px;   
+      z-index: 200;
+      padding-bottom: 100px;
+          
+          .bg-img1 {
+              background-image: url(/img/img-1a.jpg);
+              background-repeat: no-repeat;
+              background-position: top right;
+              background-size: cover;
+              border-right: 20px solid white;
+              height: 100%;
+              max-height: 530px;
+          }
+          .bg-img2 {
+              background-image: url(/img/img-1b.jpg);
+              background-repeat: no-repeat;
+              background-position: top center;
+              background-size: cover;
+              height: 100%;
+              max-height: 530px;
+          }
+          
+          .about-group {
+              margin: 60px 50px 0 10px;
+              h3 {
+                font-size: 1.5rem;
+                text-transform: uppercase;
+                color: $dark-grey;
+                font-weight: 700;
+                border-bottom: 5px solid $light;
+                margin-bottom: 1.25rem;
+                padding-bottom: 1.25rem;
+                color: $black;
+                img {
+                    height: 40px;
+                    float: right;
+                    position: relative;
+                    bottom: 5px;
+                }
+              }
+              p {
+                  font-size: 1.25rem;
+                  font-weight: 300;
+              }
+          }
+          .mentions-legales {
+            margin: 0 50px 0 0;
+              .phone {
+                  margin-top: 60px;
+                  margin-bottom: 20px;
+                      img {
+                          float: left;
+                          margin-right: 10px;
+                          position: relative;
+                          bottom: 5px;
+                      }
+                      h4 {
+                          font-size: 1.5rem;
+                          font-weight: 700;
+                          line-height: 1rem;
+                      }
+                      a {
+                          font-size: 0.875rem;
+                          font-weight: 300;
+                          text-transform: uppercase;
+                      }    
+              }
+              p {
+                  font-size: 0.75rem;
+                  font-weight: 300;
+              }
+      }
+    }
+    #section-left {
+        position: relative;
+        margin-top: -180px;
+        padding: 180px 40px 60px 40px;
+            &.bg-orange {
+            margin-bottom: 90px;
+                .title, .sub-title {
+                  color: $white;
+                }
+                .title {
+                    padding-left: 40px;
+                }
+      }
+    }
 }
 
-#slider-transport {
-  background-image: url(/img/slider-map-left.png), url(/img/slider-map-right.png);
-  background-repeat: no-repeat, no-repeat;
-  background-position: center left, center right;
-  #slider-map {
-    position: relative;
-    top: 0;
-    right: 0;
-    z-index: 10;
-    max-width: 1030px;
-    margin: 0 auto !important;
-    padding: 0 !important;
-    overflow: hidden;
-    .carousel-inner {
-      background-color: $white;
-    }
-    .carousel-item {
-      min-height: 654px;
-      background: no-repeat center center scroll;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-    }
-    .carousel-control-prev-icon {
-      background-image: url(/img/arrow.svg);
-    }
-    .carousel-control-next-icon {
-      background-image: url(/img/arrow.svg);
-    }
-  }  
-}
-
-#adresse {
-  position: relative;
-  padding: 4rem 0 0 0;
-  .img-round {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  .box-text {
-    margin-left: 200px;
-    margin-top: 50px;
-    padding: 15px 30px 15px 120px;
-    height: 220px;
-  }
-  .icon-map {
-    margin-right: 20px;
-  }
-  .title {
-    font-size: 28px !important;
-    font-weight: 200;
-    margin-bottom: 20px;
-    span {
-      font-weight: 700;
-      display: block;
-    }
-  }
-}
-
-#prix {
-  .title {
-    font-size: 32px !important;
-    font-weight: 100;
-    text-transform: uppercase;
-    span {
-      font-weight: 600;
-    }
-  }
-  .sub-title {
-    font-size: 12px !important;
-    font-weight: 200;
-    text-transform: uppercase;
-  }
-  .infos-offre {
-    max-width: 340px;
-    max-height: 180px;
-    padding: 20px 10px;
-    margin-top: 60px;
-    position: inherit !important;
-    left: 0 !important;
-    bottom: 0 !important;
-    supp {
-      font-size: 11px !important;
-      top: -15px !important;
-    }
-    .n1, .n2, .n3 {
-      text-transform: uppercase;
-    }
-    .n1 {
-      font-size: 18px;
-      font-weight: 400;
-      
-    }
-    .n2 {
-      font-size: 26px;
-      font-weight: 700;
-    }
-    .n3 {
-      font-size: 18px;
-      font-weight: 600;
-    }
-    .n4 {
-      font-size: 14px;
-      font-weight: 400;
-    }
-  }
-}
-
-#maquette-orbitale {
-  background-color: #EBA73A;
-  padding: 5rem 10px!important;
-  h2 {
-    color: #fff!important;
-    text-transform: uppercase;
-    font-weight: bold;
-  }
-  a {
-    color: #fff!important;
-    text-transform: uppercase;
-    font-size: 20px;
-  }
-  .transition:hover {
-    opacity: 0.5;
-  }
-}
-
-#visites-virtuelles {
-  padding: 0 10px!important;
-  font-size: 32px;
-  .typo-titre {
-    text-transform: uppercase;
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 0;
-    margin-top: 16px;
-  }
-  .typo-example {
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: 500;
-  }
-  .link-visites {
-    border-radius: 30px;
-    background-color: $orange;
-    color: #fff!important;
-    font-size: 14px;
-    padding: 5px 10px!important;
-    margin-top: 15px;
-    text-decoration: none;
-  }
-}
-#conditions {
-  .title {
-    font-size: 32px !important;
-    font-weight: 200;
-    text-transform: uppercase;
-    margin-top: 50px;
-    margin-bottom: 60px;
-    span {
-      font-weight: 600;
-      display: block;
-    }
-  }
-  img {
-    margin-top: 40px;
-  }
-  p {
-    font-size: 16px;
-    .little {
-      text-transform: uppercase;
-      color: light-grey;
-      font-size: 10px;
-    }
-    &.border-spe {
-      border-top: 5px solid !important;
-      padding-top: 50px !important;
-    }
-  } 
-}
