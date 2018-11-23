@@ -103,7 +103,7 @@ $app->configure('session');
 //$app->middleware(Illuminate\Session\Middleware\StartSession::class);
 $app->middleware([
     Illuminate\Session\Middleware\StartSession::class,
-    App\Http\Middleware\OldMiddleware::class
+    App\Http\Middleware\CheckOrigin::class
 ]);
 // Add `SessionServiceProvider`
 $app->register(Illuminate\Session\SessionServiceProvider::class);
