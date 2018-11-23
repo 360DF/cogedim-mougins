@@ -100,8 +100,11 @@ $app->group(['namespace' => 'App\Http\Controllers'], function ($app) {
 $app->configure('session');
 
 // Add `Session` middleware
-$app->middleware(Illuminate\Session\Middleware\StartSession::class);
-
+//$app->middleware(Illuminate\Session\Middleware\StartSession::class);
+$app->middleware([
+    Illuminate\Session\Middleware\StartSession::class,
+    App\Http\Middleware\OldMiddleware::class
+]);
 // Add `SessionServiceProvider`
 $app->register(Illuminate\Session\SessionServiceProvider::class);
 

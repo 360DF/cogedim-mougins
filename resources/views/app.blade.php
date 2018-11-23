@@ -46,7 +46,7 @@
     <script type="text/javascript" src="/js/app.js"></script>
     <script src="https://addin-koban.com/libapi/koban.js"></script>
     @yield('scripts')
-    <!--<script>
+    <script>
     	(function (i, s, o, g, r, a, m) {
     		i['KobanObject'] = r; i[r] = i[r] || function () {
     			(i[r].q = i[r].q || []).push(arguments)
@@ -64,7 +64,7 @@
       	var cookieKoban = infos.ckt;
       	document.getElementById('ckn').value = cookieKoban;
       	// On peut vérifier si les informations remontent bien sur la page
-      </script>-->
+      </script>
     
      
   </body>
