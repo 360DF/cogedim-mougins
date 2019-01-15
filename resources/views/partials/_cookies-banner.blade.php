@@ -6,5 +6,4 @@
     <a href="#" data-toggle="modal" data-target="#donnees-personnelles" class="lwhite">En savoir plus</a>
     <button type="button" id="accept-cookies" class="transition btn bg-primary text-light">Ok</button>
   </div>
-  
 </div>

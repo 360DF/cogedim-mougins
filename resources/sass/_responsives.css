@@ -1,0 +1,8 @@
+@media (max-width: 375px) {
+  .link_sticky {
+    padding: 0 22%; } }
+@media (max-width: 320px) {
+  .link_sticky {
+    padding: 0 20%; } }
+
+/*# sourceMappingURL=_responsives.css.map */

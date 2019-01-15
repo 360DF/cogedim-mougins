@@ -1,3 +1,26 @@
 footer {
-
+    .logo {
+        max-width: 150px;
+    }
+    address {
+        .phone {
+            font-size: 2rem;
+            font-weight: 700;
+            color: $color-primary;
+        }
+        span {
+            display: block;
+        }
+    }
+    .cgu {
+        padding: 0 0 4rem 0;
+        a {
+            &:hover {
+                color: $color-primary;
+            }
+        }
+    }
+    .btn {
+        padding: 0;
+    }
 } 

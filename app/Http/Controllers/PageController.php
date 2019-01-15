@@ -30,8 +30,9 @@ class PageController extends Controller
     }
     
     public function contact(Request $request) {
+        //dd($request->session());
         // SAVE TO DB
-        DB::table('groupe_cardinal_saint_just')->insert([
+        /*DB::table('groupe_cardinal_saint_just')->insert([
             'Php_id' => 129,
             'email' => $request->input('email'),
             'code_postal' => $request->input('cp'),
@@ -49,7 +50,7 @@ class PageController extends Controller
             'ville' => $request->input('ville'),
             'optin' => $request->input('optin', 'NON'),
             'projet' => $request->input('projet'),
-        ]);
+        ]);*/
         //SEND CONTACT VIA MAILGUN
         $msg = 'Bonjour, <br><br>
 
@@ -85,13 +86,13 @@ class PageController extends Controller
         $domain = ENV('MAILGUN_DOMAIN');
         
         # Make the call to the client.
-        $result = $mgClient->sendMessage($domain, array(
+        /*$result = $mgClient->sendMessage($domain, array(
             'from'    => $request->input('prenom') .' ' .$request->input('nom') .' <' .$request->input('email') .'>',
             //'to'      => '<nico@stay-up.fr>, <v.reynaud@3cent60.net>',
             'to' => '<immostjust@wanadoo.fr>,<philippe.drunet@wanadoo.fr >,<v.reynaud@3cent60.net>',
             'subject' => '(38) SAINT-JUST-CHALEYSSIN – Landing Page',
             'html'    => $msg
-        ));
+        ));*/
         
         /*if($result->http_response_code == 200) {
             //return view('templates.home', ['success' => true]);
@@ -106,8 +107,7 @@ class PageController extends Controller
                 'contact_email' =>  $request->input('email'),
                 'third_adrszipcode' =>  $request->input('cp'),
                 'third_adrscity' =>  $request->input('ville'),
-                'Tag5b45cda70dc36103a06d869c' => $request->input('projet') == 'habiter' ? '5b45cdb10dc36103a06d869e' : '5b45cdb70dc36103a06d86a4',
-                'Spenl_5b45c0cb0dc3610a10bc9013' => $request->input('optin') == 'OUI' ? 'True' : 'False',
+                'Spenl_59b6655c0dc3610e7843eb04' => $request->input('optin') == 'OUI' ? 'True' : 'False',
                 'utm_source'    => $request->session()->get('utm_source', 'accès direct'),
                 'utm_medium'    => $request->session()->get('utm_medium', 'accès direct'),
                 'utm_campaign'  => $request->session()->get('utm_campaign'),
@@ -122,10 +122,10 @@ class PageController extends Controller
         // Make the request   
         $res = $client->request('POST', 'sbm', [
             'query' => [
-                '_lp'           => '5bebf99c0dc3610ac87da14a', //landing page ID
-                'id'            => '5b45ce560dc36103a06d86ec', //Form ID
-                'cid'           => $request->cookie('kbntrk'), // Client ID from cookie
-                'zid'           => '5b45c0c50dc3610a10bc8fad', // Koban user ID
+                '_lp'           => '5bec4bc60dc3610ac87eed7b', //landing page ID
+                'id'            => '5c04f1b10dc361168c703454', //Form ID
+                //'cid'           => $request->cookie('kbntrk'), // Client ID from cookie
+                'zid'           => '59b665590dc3610e7843eaca', // Koban user ID
                 'cnl'           => '',
                 'scl'           => '',
                 'utm_source'    => $request->session()->get('utm_source', 'accès direct'),

@@ -7,15 +7,13 @@
 @import "ui-kit";
 // Utilities
 @import "utilities";
-/* ELEMENTS */
+// ELEMENTS */
 @import "header"; 
 @import "footer";
-@import "slick";
-@import 'contact';
-@import 'table';
-/* PAGES */
+@import 'form';
+// PAGES */
 @import "home";
 // responsive
 @import "responsives";
-/* Hack CSS */
+// Hack CSS */
 @import "hackcss";

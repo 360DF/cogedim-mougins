@@ -12,6 +12,7 @@ try {
     window.$ = window.jQuery = require('jquery');
 
     require('bootstrap');
+    //require('sticky-kit');
 } catch (e) {}
 
 /**
@@ -55,4 +56,4 @@ if (token) {
 //     encrypted: true
 // });
 
-window.sticky =  require('jquery-sticky')
+//window.sticky-kit =  require('sticky-kit.js')

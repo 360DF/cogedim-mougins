@@ -1,219 +1,23 @@
 @media (max-width: 1200px) {
-    header {
-        p {
-            font-size: 1rem;
-        }
-    }
-    #contain {
-        #col-left {
-            .cta-top {
-                margin: -72px;
-                font-size: 1rem;
-                padding: 1.5rem 0;
-            }
-            .block {
-                padding: 20px;
-                h3 {
-                    font-size: 1.2rem !important;
-                }
-                .nmb-appartments {
-                    font-size: 5.5rem;
-                    line-height: 5.5rem;
-                }
-                .detail-appartments {
-                    font-size: 1rem;
-                }
-                .appartments {
-                    font-size: 1.85rem;
-                }
-                .price {
-                    font-size: 1rem;
-                    b {
-                        font-size: 1.4rem;
-                    }
-                }
-            }
-        }
-        
-        #section-right {
-            .about-group {
-                h3 {
-                    font-size: 1.2rem;
-                    img {
-                        height: 30px;
-                    }
-                }    
-            }
-        }
-    }
-    ul.custom-list.light {
-        padding: 0 0 0 20px;
-    }
+    
 }  
 @media (max-width: 992px) {
-    header {
-        .text-orange {
-            display: block;
-        }
+    #sticker {
+        display: block;
+        height: inherit;
+        overflow-x: inherit !important;
+        overflow-y: inherit !important;
     }
-    #top {
-        .contain {
-            .quote {
-                background-color: rgba(255, 255, 255, 1);
-                border-radius: 0;
-            }
-        }   
-    }
-    #contain {
-        #col-left {
-            .cta-top {
-                margin: 0 !important;
-                max-width: none !important;
-             }
-        }
-        #section-right {
-            margin-left: 0;
-            padding: 20px 20px 40px 20px;
-            .bg-img1 {
-                border-right: 5px solid white;
-                max-height: 400px;
-            }
-            .bg-img2 {
-                border-left: 5px solid white;
-                max-height: 400px;
-            }
-        }
-        #section-left.bg-orange {
-            margin-bottom: 0;
-        }
-    }   
 }    
-@media (max-width: 767.98px) {
-    header {
-        .rcp {
-            margin: 0 0 30px 0;
-        }
-    }
-    #contain {
-        #section-left  {
-            .title {
-                padding-left: 0;
-            }
-        }
-        #section-right {
-            .bg-img1 {
-                max-height: 350px;
-            }
-            .bg-img2 {
-                max-height: 350px;
-            }
-        }
-    }   
-    .border-right, .border-left  {
-        border: none !important;
-    }
+@media (max-width: 768px) {
 }
 @media (max-width: 576px) {
-    header {
-        .logo {
-            max-height: 70px;
-        }
-        .rcp {
-            max-height: 70px;
-        }
-        h1 {
-            font-size: 1.7rem;
-        }
-    }
-    #top {
-        background-size: cover;
-        .contain {
-            min-height: 480px;
-            h2 {
-                font-size: 1.5rem !important;
-            }
-            .quote {
-                padding: 1rem;
-                text-align: justify;
-                border-radius: 0;
-                margin-top: 0;
-                img {
-                    position: absolute;
-                    top: -45px;
-                    left: 15px;
-                }
+    footer {
+        .cgu { 
+            a {
+                font-size: 0.8rem;
             }
         }
-    }
-    #contain {
-        #col-left {
-            .block {
-                padding: 20px;
-            }
-             .cta-top {
-                margin: 0;
-                font-size: 1.2rem;
-            }
-        }
-        #section-right {
-            margin-left: 0;
-            .bg-img1 {
-                max-height: 300px;
-            }
-            .bg-img2 {
-                max-height: 300px;
-            }
-            .about-group {
-            margin: 0;
-                h3 {
-                    text-align: center;
-                    margin-top: 30px;
-                    img {
-                        height: 50px;
-                        float: inherit;
-                        position: relative;
-                        bottom: 0;
-                        display: block;
-                        margin: 0 auto;
-                    }
-                }
-                    
-                }
-            .mentions-legales {
-                margin: 0;
-                .phone a {
-                    font-size: 0.75rem;
-                }
-            }
-        }
-        #section-left {
-            margin-top: 0;
-            padding: 20px 20px 20px 20px;
-            &.bg-orange .title {
-                padding-left: 0;
-                text-align: center;
-            }
-        }
-    }
-    #contact {
-        #form-card {
-            padding: 0 10px;
-            #form-card-body {
-                padding: 50px 1rem;
-            }
-            #form-card-header h2 {
-                padding-top: 1rem !important;
-            }
-        }
-    }
-    .title {
-        font-size: 1.5rem !important;
-    }
-    .sub-title {
-        font-size: 1.25rem !important;
-    }
-    ul.custom-list.light {
-        padding: 0;
     }
 }
 @media (max-width: 375px) {
