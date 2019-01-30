@@ -1,25 +1,6 @@
 header {
-    .navbar {
-        padding: 0.5rem 0rem;
-        .logo {
-            max-width: 150px;
-        }
-        .nav-link {
-            background-color: $light-grey;
-            color: $dark-grey; 
-            text-decoration: none;
-            padding: 1rem 2.5rem;
-            margin: 0 0 0 0.25rem;
-            &:hover {
-                background-color: $color-primary;
-                color: $white;
-            }
-        }
-        .navbar-toggler {
-            color: $grey;
-            background-color: $white;
-            border-color: rgba(0, 0, 0, 0.1);
-            margin-left: auto;
-        }
+    padding:  4rem 0 6rem 0 !important;
+    .h-footer {
+        min-height: 140px;
     }
 }

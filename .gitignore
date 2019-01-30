@@ -3,4 +3,6 @@ Homestead.json
 Homestead.yaml
 .env.dev
 /public/pdf
-/storage/framework/cache
+/storage/framework/cache/*
+/storage/framework/sessions/*
+/vendor/*

@@ -1,10 +1,55 @@
+/*FONTS*/
+
+/*light*/
+.f-light {
+  font-family: FuturaStd-Light;
+}
+/*regular*/
+.f-book {
+  font-family: FuturaStd-Book;
+}
+/*semi-bold*/
+.f-heavy {
+  font-family: FuturaStd-Heavy;
+}
+/*bold*/
+.f-bold {
+  font-family: FuturaStd-Bold;
+}
+
+/*SIZE*/
+.fs-14 {
+  font-size: 0.875rem !important;
+}
+.fs-16 {
+  font-size: 1rem !important;
+}
+.fs-18 {
+  font-size: 1.125rem !important;
+}
+.fs-20 {
+  font-size: 1.25rem !important;
+}
+.fs-24 {
+  font-size: 1.5rem !important;
+}
+
 /*PADDING*/
   .nopadding {
     padding-left: 0;
     padding-right: 0;
   }
+  .nopadding-left {
+    padding-left: 0;
+  }
+  .nopadding-right {
+    padding-right: 0;
+  }
   .p20 {
     padding: 20px;
+  }
+  .p40 {
+    padding: 40px;
   }
   .pt20 {
     padding-top: 20px;
@@ -29,7 +74,7 @@
   .mt20 {
     margin-top: 20px;
   }
-  .pb20 {
+  .mb20 {
     margin-bottom: 20px;
   }
   .mlr20 {
@@ -47,12 +92,15 @@
     }
   }
   
-/* BORDER RADIUS*/
+/* BORDER - BORDER RADIUS*/
   .br {
     -webkit-border-radius: 40px;
     border-radius: 40px;
   }
-
+  .border-primary-green {
+    border: 1.25rem solid $light-color-primary;
+  } 
+  
 /*EFFECT  */
   .transition {
     -webkit-transition: all 0.5s ease;

@@ -1,5 +1,47 @@
+@media (max-width: 1400px) {
+    .picto-legal {
+        img {
+            margin: 0 auto;
+            float: inherit;
+            display: block;
+        }  
+        .text-light-secondary {
+            margin-top: 1.5rem;
+        }
+        .fs-18 {
+            display: block !important;
+            min-height: 60px;
+        }
+        p {
+            margin-top: 10px;
+        }
+        .spe {
+            margin-top: 67px !important;
+        }
+    }
+}
 @media (max-width: 1200px) {
-    
+    .programm-container {
+        .slogan {
+            font-size: 1rem !important;
+        }
+        .infos, .name, .typo, .price, .fs-18 {
+            font-size: 1rem !important;
+        }
+    }
+    .t1 {
+        font-size: 1.5rem;
+        span {
+          font-size: 2rem;
+          font-weight: bold;
+        }
+        sup {
+          font-size: 14px;
+          position: relative;
+          top: -20px;
+          left: 5px;
+        }
+      }
 }  
 @media (max-width: 992px) {
     #sticker {
@@ -8,16 +50,91 @@
         overflow-x: inherit !important;
         overflow-y: inherit !important;
     }
+    .top_link {
+        background-color : $light-color-primary;
+    }
 }    
 @media (max-width: 768px) {
+    ul#domaine-jardins-en-vue, ul#jardins-des-sens {
+        margin: 0 !important; 
+    }
+    footer {
+        .phone {
+            font-size: 1.5rem;
+        }
+    }
+    .picto-legal {
+        .fs-18 {
+            display: block !important;
+            min-height: inherit;
+        }
+        p {
+            margin-top: 10px;
+        }
+        .spe {
+            margin-top: inherit !important;
+        }
+    }
 }
 @media (max-width: 576px) {
+    header {
+        padding: 2rem 0 3rem 0 !important;
+    }
+    .box-title {
+        padding: 1rem;
+    }
+    .table {
+        width: 100%;
+        top: -1rem;
+        sup { 
+            font-size: 0.625rem !important;
+            left: 0;
+        }
+        td {
+            padding: 1rem 0 !important;
+        }
+        .fs-24 {
+            font-size: 1.125rem !important;
+        }
+        .fs-20 {
+            font-size: 0.875rem !important;
+        }
+    }
+    .subtable {
+        width: 100%;
+        top: -1rem;
+    }
+    .h-slide {
+      min-height: 300px !important;
+    }  
+    .subtable {
+        .fs-18 {
+            font-size: 0.875rem !important;
+        }
+    }
+    
+    .bg-light-grey {
+        h2 {
+            &.text-secondary {
+                font-size: 1.25rem !important;
+            }
+        }
+    }
     footer {
+        .logo {
+            margin-bottom: 2rem;
+        }
         .cgu { 
             a {
                 font-size: 0.8rem;
             }
         }
+        .ml-footer a:first-child {
+            margin-top: 2rem;
+        }
+    }
+    .form-card h2, .form-card p {
+        font-size: 1.4rem !important;
     }
 }
 @media (max-width: 375px) {

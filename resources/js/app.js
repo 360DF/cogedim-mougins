@@ -1,12 +1,47 @@
 require('./bootstrap');
 require('./sticky-kit');
 
+
+var moment = require('moment');
+
 $(document).ready(function(){
    /// STICKER   
   $("#sticker").stick_in_parent()
 });
 
 $(document).ready(function(){
+  
+  //Collapse lots
+  $('#toggle-btn').on('click', function(){
+    $('#collapse-last').prev().toggleClass('opacity');
+  } )
+  
+  //FORM MODAL
+  $('#form-modal').on('show.bs.modal', function (event) {
+    var button = $(event.relatedTarget) // Button that triggered the modal
+    var recipient = button.data('program') // Extract info from data-* attributes
+    // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+    // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+    var modal = $(this)
+    console.log(recipient)
+    modal.find('#program-field').val(recipient)
+  })
+  $('#datepicker').pickadate({
+    firstDay: 1,
+    monthsFull: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'],
+    weekdaysShort: ['Dim', 'Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam'],
+    today: 'aujourd\'hui',
+    clear: 'effacer',
+    formatSubmit: 'dd/mm/yyyy',
+    min: true,
+  })
+  
+  $('#timepicker').pickatime({
+    min: true,
+    interval: 120,
+    format: 'HH:i',
+    clear: 'Effacer',
+  })
   
 /// SCROLLto  
   $('.js-scrollTo').on('click', function() { 
@@ -25,7 +60,7 @@ $(document).ready(function(){
   })
 
 /// CONTACT US
-  $('body').append('<a href="#form-contact" id="contact-mobile" class="link_sticky mx-auto text-light contact-sticky js-scrollTo">Contactez-nous</a>');
+  $('body').append('<a href="#go-to-form-bottom" id="contact-mobile" class="link_sticky mx-auto text-light contact-sticky js-scrollTo">Contactez-nous</a>');
   $('#contact-mobile').click(function(e) {
     var page = $(this).attr('href'); 
       var speed = 750; 

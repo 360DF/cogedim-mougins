@@ -1,3 +1,31 @@
 @font-face {
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: FuturaStd-Light;
+    src: url(../fonts/FuturaStd-Light.eot?#iefix) format("embedded-opentype"),
+    url(../fonts/FuturaStd-Light.otf) format("opentype"),
+    url(../fonts/FuturaStd-Light.woff) format("woff"),
+    url(../fonts/FuturaStd-Light.ttf) format("truetype"),
+    url(../fonts/FuturaStd-Light.svg#FuturaStd-Light) format("svg");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: FuturaStd-Heavy;
+    src: url(../fonts/FuturaStd-Heavy.eot?#iefix) format("embedded-opentype"),url(../fonts/FuturaStd-Heavy.otf) format("opentype"),url(../fonts/FuturaStd-Heavy.woff) format("woff"),url(../fonts/FuturaStd-Heavy.ttf) format("truetype"),url(../fonts/FuturaStd-Heavy.svg#FuturaStd-Heavy) format("svg");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: FuturaStd-Bold;
+    src: url(../fonts/FuturaStd-Bold.eot?#iefix) format("embedded-opentype"),url(../fonts/FuturaStd-Bold.otf) format("opentype"),url(../fonts/FuturaStd-Bold.woff) format("woff"),url(../fonts/FuturaStd-Bold.ttf) format("truetype"),url(../fonts/FuturaStd-Bold.svg#FuturaStd-Bold) format("svg");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: FuturaStd-Book;
+    src: url(../fonts/FuturaStd-Book.eot?#iefix) format("embedded-opentype"),url(../fonts/FuturaStd-Book.otf) format("opentype"),url(../fonts/FuturaStd-Book.woff) format("woff"),url(../fonts/FuturaStd-Book.ttf) format("truetype"),url(../fonts/FuturaStd-Book.svg#FuturaStd-Book) format("svg");
+    font-weight: 400;
+    font-style: normal;
 }

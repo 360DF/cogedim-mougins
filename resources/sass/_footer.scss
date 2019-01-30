@@ -1,16 +1,21 @@
 footer {
-    .logo {
-        max-width: 150px;
+    padding: 4rem 0;
+    
+    .h-footer {
+        min-height: 130px;
     }
-    address {
-        .phone {
-            font-size: 2rem;
-            font-weight: 700;
-            color: $color-primary;
-        }
-        span {
-            display: block;
-        }
+    .logo {}
+    .phone {
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: white;
+        padding: 1rem 2rem;
+        background-color: $color-primary;
+    }
+    .ml-footer a {
+        color: $color-primary;
+        font-size: 1.25rem;
+        line-height: 1.875rem;
     }
     .cgu {
         padding: 0 0 4rem 0;
@@ -24,3 +29,24 @@ footer {
         padding: 0;
     }
 } 
+
+#mentions-legales, #donnees-personnelles {
+    .modal-content {
+        background-color: $white;
+        color: $dark-grey;
+    }
+    .modal-header {
+        text-align: center !important;
+        border-color: $white;
+        background-color: $white;
+        color: $color-primary;
+    }
+    .modal-title {
+        text-align: center !important;
+        margin: 0 auto;
+        width: 100%;
+        font-family: FuturaStd-Heavy;
+        font-size: 2.125rem;
+        text-transform: inherit !important;
+    }
+}

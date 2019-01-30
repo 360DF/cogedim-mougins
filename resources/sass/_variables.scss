@@ -5,22 +5,38 @@ $body-bg: $white;
 $white: #ffffff !important;
 $black: #000000 !important;
 
-$dark-grey: #333333 !important;
-$grey: #cccccc !important;
-$light-grey: #efefef !important;
+$dark-grey: #4A4A49 !important;
+$grey: #80868B !important;
+$light-grey: #F9F9F9 !important;
+$darken-grey: #D8D8D8 !important;
 
-$color-primary: #FF9281 !important; 
-$color-secondary: #E8DA6A !important;
+// Vert
+$color-primary: #007235 !important; 
+$light-color-primary: #659E71!important;
+
+// Couleur COGEDIM
+$color-secondary: #50015C !important;
+$light-color-secondary: #A6177A !important;
+
 
 // Background
 .bg-primary {
   background-color: $color-primary;
 }
+.bg-light-primary {
+  background-color: $light-color-primary;
+}
 .bg-secondary {
   background-color: $color-secondary;
 }
+.bg-light-secondary {
+  background-color: $light-color-secondary;
+}
 .bg-grey {
   background-color: $grey;
+}
+.bg-light-grey {
+  background-color: $light-grey;
 }
 .bg-white { 
   background-color: $white;
@@ -33,6 +49,9 @@ $color-secondary: #E8DA6A !important;
 .text-secondary {
     color: $color-secondary;
 }
+.text-light-secondary {
+    color: $light-color-secondary;
+}
 .text-dark {
     color: $black;
 }
@@ -41,7 +60,7 @@ $color-secondary: #E8DA6A !important;
 }
 
 // Typography
-$font-primary: 'Nunito Sans', sans-serif;
+$font-primary:  FuturaStd-Book;
 $font-secondary : $font-primary;
 
 $font-size-base: 1rem;

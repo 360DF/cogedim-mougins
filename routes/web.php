@@ -17,7 +17,8 @@ $app->get('/', [
 $app->get('/confirmation', [
     'as' => 'confirmation', 'uses' => 'PageController@confirmation']
 );
-$app->get('/test', [
-    'as' => 'test', 'uses' => 'PageController@index']
+$app->get('/{slug}', [
+    'as' => 'getProgram', 'uses' => 'PageController@getProgram']
 );
 $app->post('/contact', ['as' => 'contact', 'uses' => 'PageController@contact']);
+$app->post('/etre-appele', ['as' => 'beCalled', 'uses' => 'PageController@contact']);

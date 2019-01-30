@@ -16,24 +16,89 @@ class PageController extends Controller
      */
     public function __construct()
     {
-        
+        $this->data = [
+            'domaine-jardins-en-vue' => [
+                'slug' => 'domaine-jardins-en-vue',
+                'name' => 'Domaine jardins en vue',
+                'slogan' => 'Entrez dans la confidence d’un domaine très privé',
+                'location' => '06250 Mougins',
+                'slides' => [
+                    'prog2-slide-1.jpg',
+                    'prog2-slide-2.jpg',
+                    'prog2-slide-3.jpg',
+                    'prog2-slide-4.jpg',
+                ],
+                'title' => 'une résidence avec piscine privée, idéal pour habiter en famille',
+                'pros' => [
+                    'Face au Vieux Village, une résidence entre calades et jardins méditerranéens.',
+                    'Une piscine privée nichée dans un écrin de nature avec larges plages ensoleillées et pool house',
+                    'Appartements de grand standing du studio au 4 pièces et quelques villas sur le toit avec terrasses plein ciel et vues sur le Vieux Village'
+                ],
+                'stock' => [
+                    ['Studio', '179 000'],
+                    ['2 pièces', '218 000'],
+                    ['3 pièces', '290 000'],
+                    ['4 pièces', '755 000']
+                ],
+                'brochure' => '93311_brochure-2.pdf',
+                'orbital' => 'https://altarea-cogedim.iframe.evimmo.fr/services/iframev3/maquette?p=116199',
+                'itinary' => ['', ''],
+            
+            ],
+            'jardins-des-sens' =>
+            [
+                'slug' => 'jardins-des-sens',
+                'name' => 'Jardins des sens',
+                'slogan' => 'Vivre autour d’une piscine privée au calme des côteaux',
+                'location' => '06250 Mougins',
+                'slides' => [
+                    'prog1-slide-1.jpg',
+                    'prog1-slide-2.jpg',
+                    'prog1-slide-3.jpg',
+                ],
+                'title' => 'une adresse d’exception sur les hauteurs de Cannes',
+                'pros' => [
+                    'Idéalement situé à 15 km de Cannes et de la Croisette',
+                    'À flanc de côteaux, au cœur d’un jardin méditerranéen, du studio au 3 pièces avec beaux balcons et larges terrasses',
+                    'À proximité du futur du cinéma, des commerces et des services',
+                ],
+                'stock' => [
+                    ['Studio', '173 000'],
+                    ['2 pièces', '204 000'],
+                    ['3 pièces', '259 000']
+                ],
+                'brochure' => '93311_brochure_1_0.pdf',
+                'orbital' => 'https://altarea-cogedim.iframe.evimmo.fr/services/iframev3/maquette?p=116199',
+                'itinary' => '',
+            
+            ]
+        ];
     }
 
-    public function index($locale = 'fr') {
+    public function index($slug = null) {
         
-        return view('templates.home', ['success' => false]);
+        return view('templates.home', ['success' => false, 'data' => $this->data, 'route' => 'home']);
+    }
+    
+    public function getProgram(Request $request, $slug = null) {
+        
+        //$prog = $slug == 'domaine-jardins-en-vue' ? 0 : 1;
+        
+        
+        //dd($this->data);
+        return view('templates.program', ['success' => false, 'data' => $this->data[$slug], 'route' => 'getProgram']);
     }
     
     public function confirmation() {
 
-        return view('templates.home', ['success' => true]);
+        return view('templates.home', ['success' => true, 'data' => $this->data, 'route' => 'home']);
     }
     
     public function contact(Request $request) {
-        //dd($request->session());
         // SAVE TO DB
-        /*DB::table('groupe_cardinal_saint_just')->insert([
-            'Php_id' => 129,
+       // dd($request->all());
+        DB::table('cogedim_mougins')->insert([
+            'Php_id' => 106,
             'email' => $request->input('email'),
             'code_postal' => $request->input('cp'),
             'email' => $request->input('email'),
@@ -49,50 +114,60 @@ class PageController extends Controller
             'telephone' => $request->input('telephone'),
             'ville' => $request->input('ville'),
             'optin' => $request->input('optin', 'NON'),
-            'projet' => $request->input('projet'),
-        ]);*/
+        ]);
+        
         //SEND CONTACT VIA MAILGUN
-        $msg = 'Bonjour, <br><br>
+        $civ = $request->input('civilite') == "MME" ? "03 | Madame" : "02 | Monsieur" ;
+        $action = $request->path() == 'contact' ? 'DP | demande d’information programme' : 'D3 | demande de rappel programme';
 
-        Cette personne a souhaité avoir des informations : <br><br>
+        if($request->path() == 'contact') {
+            $comment = $request->input('program') == 'home' ? ' Mougins - Demande d\'informations' : $this->data[$request->input('program')]['name'] . ' Mougins - Demande d\'informations';            
+        } else {
+$comment = 'Date Heure de Rappel: ' .$request->input('date_submit') .' à ' . $request->input('time') .'h
+' .$request->input('program') . ' Mougins - Demande de rappel';
+        }
         
-        <b>Programme concerné</b><br>
-        Promoteur: Groupe Cardinal<br>
-        Ville programme : (38) SAINT-JUST-CHALEYSSIN<br>
-        Nom du programme : RUE GASTON PERRIER<br><br>
-        
-        <b>Coordonnées du contact</b><br>
-        Civilité : '.$request->input('civilite') .'<br>
-        Nom : '.$request->input('nom').'<br>
-        Prénom : '.$request->input('prenom').'<br>
-        Téléphone : '.$request->input('telephone').'<br>
-        Email : '.$request->input('email').'<br>
-        Code postal : '.$request->input('cp').'<br>
-        Ville : '.$request->input('ville').'<br><br>
-        Projet: '.$request->input('projet').'<br>
-        Optin : '.$request->input('optin', 'NON').'<br><br>
-        
-        
-        <b>Origine publicitaire</b><br>
-        Source : '.$request->session()->get('utm_source', 'accès direct').'<br>
-        Campagne : '.$request->session()->get('utm_campaign', 'accès direct').'<br>
-        Media : ' .$request->session()->get('utm_medium', 'accès direct').'<br><br>';
-        
-        /*<b>Complément info :</b><br>
-        Date demande : '.date('Y/m/d H:i:s').'';*/
-        
+$text = 'EXPEDITEUR DU FORMULAIRE : sitelogement@cogedim.com
+CANAL : VI
+SOCIETE : COGEDIM
+OBJET : Demande d\'information venant de la Landing Mougins
+EVENEMENT : FG | Formulaire landing logement
+ACTION REALISEE : ' .$action .'
+SUITE A DONNER : RAPDI | Rappeler rapidement
+DATE DE RELANCE :
+DATE DEMANDE : '.date('d/m/Y').'
+HEURE DEMANDE : '.date('H:i').'
+PRIMPROMO PROGRAMME : 93311
+CIVILITE : ' .$civ .'
+NOM : '.$request->input('nom').'
+PRENOM : '.$request->input('prenom').'
+TELEPHONE 1 : '.$request->input('telephone').'
+ADRESSE MAIL 1 : '.$request->input('email').'
+ADRESSE 1 : 
+CODE POSTAL : '.$request->input('cp').'
+VILLE : '.$request->input('ville').'
+PUBLICITE ACCEPTEE : '.$request->input('optin', 'NON') .'
+PUBLICITE PARTENAIRE ACCEPTEE : '.$request->input('optin', 'NON') .'
+ORIGINE PUBLICITAIRE : 9857 | Mini site
+CAMPAGNE : 19-01-jardins_vue_mougins-06-relance
+BASE EMAIL : '.$request->session()->get('utm_source') .'
+COMMENTAIRE :
+' .$comment .'
+FIN DE COMMENTAIRE';
+
         # Instantiate the client.
         $mgClient = new Mailgun(ENV('MAILGUN_API_KEY'));
         $domain = ENV('MAILGUN_DOMAIN');
         
         # Make the call to the client.
-        /*$result = $mgClient->sendMessage($domain, array(
+        $result = $mgClient->sendMessage($domain, array(
             'from'    => $request->input('prenom') .' ' .$request->input('nom') .' <' .$request->input('email') .'>',
-            //'to'      => '<nico@stay-up.fr>, <v.reynaud@3cent60.net>',
-            'to' => '<immostjust@wanadoo.fr>,<philippe.drunet@wanadoo.fr >,<v.reynaud@3cent60.net>',
-            'subject' => '(38) SAINT-JUST-CHALEYSSIN – Landing Page',
-            'html'    => $msg
-        ));*/
+            //'to'      => '<formulaires_crm@altareacogedim.com>',
+            //'cc'      => '<sinternet@altareacogedim.com>,<a.monomakhoff@3cent60.net>',
+            'to' => '<formulaire.coeurmougins@marketing-lab.com>,<m.mykita@3cent60.net>',
+            'subject' => 'Demande d\'information venant de la Landing Cogedim Mougins',
+            'text'    => $text
+        ));
         
         /*if($result->http_response_code == 200) {
             //return view('templates.home', ['success' => true]);
@@ -107,7 +182,7 @@ class PageController extends Controller
                 'contact_email' =>  $request->input('email'),
                 'third_adrszipcode' =>  $request->input('cp'),
                 'third_adrscity' =>  $request->input('ville'),
-                'Spenl_59b6655c0dc3610e7843eb04' => $request->input('optin') == 'OUI' ? 'True' : 'False',
+                'Spenl_587b42a20dc3610ff48d55fe' => $request->input('optin') == 'OUI' ? 'True' : 'False',
                 'utm_source'    => $request->session()->get('utm_source', 'accès direct'),
                 'utm_medium'    => $request->session()->get('utm_medium', 'accès direct'),
                 'utm_campaign'  => $request->session()->get('utm_campaign'),
@@ -122,10 +197,10 @@ class PageController extends Controller
         // Make the request   
         $res = $client->request('POST', 'sbm', [
             'query' => [
-                '_lp'           => '5bec4bc60dc3610ac87eed7b', //landing page ID
-                'id'            => '5c04f1b10dc361168c703454', //Form ID
+                '_lp'           => '5af943f70dc36107cc7c9353', //landing page ID
+                'id'            => '5943acb00dc36103c832adf5', //Form ID
                 //'cid'           => $request->cookie('kbntrk'), // Client ID from cookie
-                'zid'           => '59b665590dc3610e7843eaca', // Koban user ID
+                'zid'           => '587b42980dc3610ff48d55c4', // Koban user ID
                 'cnl'           => '',
                 'scl'           => '',
                 'utm_source'    => $request->session()->get('utm_source', 'accès direct'),
@@ -139,24 +214,8 @@ class PageController extends Controller
         
         // If success
         if ($res->getStatusCode() == 200) {
-            return redirect()->route('confirmation');
+            return redirect()->route('confirmation', ['success' => true]);
         }
     }
-    public function test() {
-        $reader = Reader::createFromPath(__DIR__.'/../../../public/stock.csv', 'r');
-        $reader->setEncodingFrom('iso-8859-15');
-        $reader->setDelimiter(';');
-        
-        $rows = [];
-        
-        foreach($reader as $row) {
-            array_push($rows, $row);
-        }
-        
-        $rows = collect($rows)->groupBy(function($item, $key) {
-            return $item[3];
-        })->toArray();
-        
-        return view('templates.test', ['success' => false, 'lots' => $rows]);
-    }
+    
 }
