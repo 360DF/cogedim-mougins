@@ -1,9 +1,9 @@
 <div class="form-card">
   <div class="form-card-header">
     <div class="text-center">
-      <img src="/img/logo-coeurmougins.png" class="img-fluid logo">
+      <img src="/img/logo-coeurmougins.png" class="img-fluid logo" style="width: 100px;margin-bottom: 20px;">
       <h2>INSCRIVEZ-VOUS</h2>
-      <p>et profitez de nos offres exceptionnelles</p>
+      <p>pour profiter des offres exceptionnelles limitées et être contacté(e) par un conseiller immobilier</p>
     </div>
   </div>
   <div class="form-card-body">
@@ -61,10 +61,10 @@
       </div>
       <div class="form-row">
         <div class="col-12">
-          <div class="form-group">
-            <div class="control-group">
+          <div class="form-group" style="margin-bottom: 0;">
+            <div class="control-group" style="margin-bottom: 5px;">
               <label class="control control-checkbox fs-16">
-                  En cochant cette case, je consens à recevoir des offres commerciales et des informations sur les produits et services Cogedim et Marignan.
+                  Oui, je souhaite être alerté(e) des opportunités immobilières
                       <input type="checkbox" name="optin"  />
                   <div class="control_indicator"></div>
               </label>
@@ -76,7 +76,7 @@
         <button type="submit" id="" class="submit-btn d-block mx-auto transition">
           je m'inscris
         </button>
-        <span class="cgu">* champs obligatoires</span>
+        <span class="cgu">*Champs obligatoire Les données signalées ci-dessus par un astérisque sont nécessaires pour nous permettre de répondre à votre demande d'information. Elles sont collectées et traitées informatiquement par COVALENS (société du groupe ALTAREA COGEDIM) uniquement sur la base de votre consentement et sont destinées à ses services internes et à ses sous-traitants techniques, aux seules fins de répondre à votre demande. Ces informations ne font l’objet d’aucun transfert en dehors du territoire de l’UE. Vos données sont conservées pendant le seul délai nécessaire à la gestion de votre demande, et si vous y consentez ci-dessus, dans le cadre de nos opérations de prospection commerciale à concurrence d’un délai de 3 ans au terme duquel elles sont définitivement effacées sauf en cas de nouvelle demande de votre part. En application de la règlementation applicable à la protection des données personnelles, vous disposez sur ces données de droits (i) d’accès, (ii) de rectification, (iii) d’effacement, (iv) de limitation et (v) de portabilité vers un prestataire tiers le cas échéant. Vous pouvez en outre vous opposer à tout moment au traitement de vos données. Vous pourrez faire valoir ces droits en écrivant au DPO à dpo@altareacogedim.com, en justifiant de votre identité. En cas de litige, vous disposez également du droit de saisir la CNIL.</span>
       </div> 
     </form>
   </div>

@@ -11,8 +11,8 @@ $light-grey: #F9F9F9 !important;
 $darken-grey: #D8D8D8 !important;
 
 // Vert
-$color-primary: #007235 !important; 
-$light-color-primary: #659E71!important;
+$color-primary: #007235 !important;
+$light-color-primary: #38b86e!important;
 
 // Couleur COGEDIM
 $color-secondary: #50015C !important;
@@ -23,45 +23,56 @@ $light-color-secondary: #A6177A !important;
 .bg-primary {
   background-color: $color-primary;
 }
+
 .bg-light-primary {
   background-color: $light-color-primary;
 }
+
 .bg-secondary {
   background-color: $color-secondary;
 }
+
 .bg-light-secondary {
   background-color: $light-color-secondary;
 }
+
 .bg-grey {
   background-color: $grey;
 }
+
 .bg-light-grey {
   background-color: $light-grey;
 }
-.bg-white { 
+
+.bg-white {
   background-color: $white;
 }
 
 /* Texte */
+
 .text-primary {
-    color: $color-primary;
+  color: $color-primary;
 }
+
 .text-secondary {
-    color: $color-secondary;
+  color: $color-secondary;
 }
+
 .text-light-secondary {
-    color: $light-color-secondary;
+  color: $light-color-secondary;
 }
+
 .text-dark {
-    color: $black;
+  color: $black;
 }
+
 .text-light {
-    color: $white;
+  color: $white;
 }
 
 // Typography
-$font-primary:  FuturaStd-Book;
-$font-secondary : $font-primary;
+$font-primary : FuturaStd-Book;
+$font-secondary: $font-primary;
 
 $font-size-base: 1rem;
 $line-height-base: 1.5;
