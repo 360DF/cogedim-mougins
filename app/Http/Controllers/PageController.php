@@ -81,11 +81,7 @@ class PageController extends Controller
     }
     
     public function getProgram(Request $request, $slug = null) {
-        
-        //$prog = $slug == 'domaine-jardins-en-vue' ? 0 : 1;
-        
-        
-        //dd($this->data);
+
         return view('templates.program', ['success' => false, 'data' => $this->data[$slug], 'route' => 'getProgram']);
     }
     
@@ -95,18 +91,17 @@ class PageController extends Controller
     }
     
     public function contact(Request $request) {
-        // SAVE TO DB
-       // dd($request->all());
+
         DB::table('cogedim_mougins')->insert([
             'Php_id' => 106,
             'email' => $request->input('email'),
             'code_postal' => $request->input('cp'),
             'email' => $request->input('email'),
-            'utm_source' => $request->session()->get('utm_source', 'accès direct'),
-            'utm_medium' => $request->session()->get('utm_medium', 'accès direct'),
-            'utm_campaign' => $request->session()->get('utm_campaign', ''),
-            'utm_content' => $request->session()->get('utm_content', ''),
-            'utm_term' => $request->session()->get('utm_term', ''),
+            'utm_source' => $request->input('utm_source'),
+            'utm_medium' => $request->input('utm_medium'),
+            'utm_campaign' => $request->input('utm_campaign'),
+            'utm_content' => $request->input('utm_content'),
+            'utm_term' => $request->input('utm_term'),
             'date' => date('Y/m/d H:i:s'),
             'civilite' => $request->input('civilite') == '02 | Monsieur' ? 'Mr' : 'Mme',
             'nom' => $request->input('nom'),
@@ -150,7 +145,7 @@ PUBLICITE ACCEPTEE : '.$request->input('optin', 'NON') .'
 PUBLICITE PARTENAIRE ACCEPTEE : '.$request->input('optin', 'NON') .'
 ORIGINE PUBLICITAIRE : 9857 | Mini site
 CAMPAGNE : 19-01-jardins_vue_mougins-06-relance
-BASE EMAIL : '.$request->session()->get('utm_source') .'
+BASE EMAIL : '.$request->input('utm_source') .'
 COMMENTAIRE :
 ' .$comment .'
 FIN DE COMMENTAIRE';
@@ -183,11 +178,11 @@ FIN DE COMMENTAIRE';
                 'third_adrszipcode' =>  $request->input('cp'),
                 'third_adrscity' =>  $request->input('ville'),
                 'Spenl_587b42a20dc3610ff48d55fe' => $request->input('optin') == 'OUI' ? 'True' : 'False',
-                'utm_source'    => $request->session()->get('utm_source', 'accès direct'),
-                'utm_medium'    => $request->session()->get('utm_medium', 'accès direct'),
-                'utm_campaign'  => $request->session()->get('utm_campaign'),
-                'utm_content'   => $request->session()->get('utm_content'),
-                'utm_term'      => $request->session()->get('utm_term'),
+                'utm_source'    => $request->input('utm_source'),
+                'utm_medium'    => $request->input('utm_medium'),
+                'utm_campaign'  => $request->input('utm_campaign'),
+                'utm_content'   => $request->input('utm_content'),
+                'utm_term'      => $request->input('utm_term'),
             ];
             
         //Initialize new guzzle client
@@ -203,18 +198,17 @@ FIN DE COMMENTAIRE';
                 'zid'           => '587b42980dc3610ff48d55c4', // Koban user ID
                 'cnl'           => '',
                 'scl'           => '',
-                'utm_source'    => $request->session()->get('utm_source', 'accès direct'),
-                'utm_medium'    => $request->session()->get('utm_medium', 'accès direct'),
-                'utm_campaign'  => $request->session()->get('utm_campaign'),
-                'utm_content'   => $request->session()->get('utm_content'),
-                'utm_term'      => $request->session()->get('utm_term'),
+                'utm_source'    => $request->input('utm_source'),
+                'utm_medium'    => $request->input('utm_medium'),
+                'utm_campaign'  => $request->input('utm_campaign'),
+                'utm_content'   => $request->input('utm_content'),
+                'utm_term'      => $request->input('utm_term'),
             ],
             'form_params' => $koban_fields
         ]);
         
         // If success
         if ($res->getStatusCode() == 200) {
-            $request->session()->flush();
             return redirect()->route('confirmation', ['success' => true]);
         }
     }

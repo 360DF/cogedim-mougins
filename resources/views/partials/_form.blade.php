@@ -9,6 +9,11 @@
   <div class="form-card-body">
     <form action="/contact" method="POST">
       <input type="text" name="program" hidden value="{{ $route == 'getProgram' ? $data['slug'] : 'home' }}" />
+      <input type="hidden" name="utm_source" value="{{ app('request')->input('utm_source') }}"/>
+      <input type="hidden" name="utm_medium" value="{{ app('request')->input('utm_medium') }}"/>
+      <input type="hidden" name="utm_campaign" value="{{ app('request')->input('utm_campaign') }}"/>
+      <input type="hidden" name="utm_content" value="{{ app('request')->input('utm_content') }}"/>
+      <input type="hidden" name="utm_term" value="{{ app('request')->input('utm_term') }}"/>
       <div class="form-row">
         <div class="col-12">
           <div class="control-group d-flex justify-content-center">
