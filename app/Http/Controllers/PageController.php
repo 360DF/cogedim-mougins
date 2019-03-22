@@ -145,7 +145,7 @@ PUBLICITE ACCEPTEE : '.$request->input('optin', 'NON') .'
 PUBLICITE PARTENAIRE ACCEPTEE : '.$request->input('optin', 'NON') .'
 ORIGINE PUBLICITAIRE : 9857 | Mini site
 CAMPAGNE : 19-01-jardins_vue_mougins-06-relance
-BASE EMAIL : '.$request->input('utm_source') .'
+BASE EMAIL : '.$request->input('utm_source').'
 COMMENTAIRE :
 ' .$comment .'
 FIN DE COMMENTAIRE';
