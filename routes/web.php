@@ -1,5 +1,5 @@
 <?php
-
+use Illuminate\Support\Facades\Session;
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -22,3 +22,7 @@ $app->get('/{slug}', [
 );
 $app->post('/contact', ['as' => 'contact', 'uses' => 'PageController@contact']);
 $app->post('/etre-appele', ['as' => 'beCalled', 'uses' => 'PageController@contact']);
+
+$app->get('/test', function() {
+    return response()->json(Session::all());
+});

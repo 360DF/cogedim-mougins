@@ -214,6 +214,7 @@ FIN DE COMMENTAIRE';
         
         // If success
         if ($res->getStatusCode() == 200) {
+            $request->session()->flush();
             return redirect()->route('confirmation', ['success' => true]);
         }
     }
